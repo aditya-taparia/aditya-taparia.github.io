@@ -44432,7 +44432,7 @@ E(a){var s=null
 return A.fL(new A.d8(B.l2,s,s,new A.b2(B.KH,A.aHd(B.b7,0,s,A.df(s,s,A.K(a).ax.c,s,s,s,s,s,s,s,s,16,s,s,s,s,s,!0,s,s,s,s,s,s,s,s),B.LM,this.c,B.a8m,new A.ajB(a),"Resume"),s),s),1)}}
 A.ajB.prototype={
 $0(){A.LT(this.a,B.kw,!0)
-A.aJz("assets/Resume.pdf")},
+A.aJz("../assets/Resume.pdf")},
 $S:0}
 A.Ds.prototype={
 a9(){var s=null,r=$.m9
