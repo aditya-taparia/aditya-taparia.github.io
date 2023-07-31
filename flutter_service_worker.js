@@ -3,10 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"index.html": "2549a474fcddc46c031be300fcf2e919",
-"/": "2549a474fcddc46c031be300fcf2e919",
+const RESOURCES = {"index.html": "2b46f9ed70ce1d6b90c3833e3f67cd6d",
+"/": "2b46f9ed70ce1d6b90c3833e3f67cd6d",
 "flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
-"main.dart.js": "e7194d5ba4beaf5fb320590ac808747c",
+"main.dart.js": "fc71b73c4a2ca0e16c230068336ced96",
 "version.json": "d52074dff00ac68823d510b883bb87b5",
 "canvaskit/chromium/canvaskit.js": "8c8392ce4a4364cbb240aa09b5652e05",
 "canvaskit/chromium/canvaskit.wasm": "fc18c3010856029414b70cae1afc5cd9",
@@ -22,7 +22,7 @@ const RESOURCES = {"index.html": "2549a474fcddc46c031be300fcf2e919",
 "assets/fonts/VarelaRound-Regular.ttf": "3c3c18c24b0bd85a303bc3f2581d53fc",
 "assets/AssetManifest.bin": "1d696ec4488f0c2ac990f5520e56a836",
 "assets/AssetManifest.json": "9b5a0e5f86558ab508fe4e87c2b9f5b0",
-"assets/NOTICES": "1babf5aa26b3fcc814908b394cb3a60d",
+"assets/NOTICES": "7c6485d86536ea7b6e7e5056e889fa1d",
 "assets/FontManifest.json": "0221cb4ede4c3a130af837c5026ed829",
 "assets/packages/wakelock_plus/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
