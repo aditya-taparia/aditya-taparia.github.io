@@ -1,0 +1,109 @@
+{
+  "note" : "This website was last updated on 1st March 2023.",
+  "about": "<p>I am a graduate student pursuing a Bachelor's in Computer Science & Engineering (Hons.) at <a href=\"https://www.iiitkottayam.ac.in/#!/home\">Indian Institute of Information Technology - Kottayam</a>. Currently, I am conducting research for my thesis project under <a href=\"https://www.iiitkottayam.ac.in/#!/faculty/lincy\">Dr. Rubell Marion Lincy G</a>. My project focuses on optimal portfolio allocation based on the user's specified level of risk tolerance. We have implemented various stock price prediction models to achieve this, including gated recurrent unit networks, generative adversarial networks, and long short-term memory networks. Additionally, we have developed an innovative model for the same. Our research aims to forecast prices and allocate investments based on the predicted level of risk. We are currently working on the portfolio allocation segment of the project.</p> <p>You can also find some of my previous projects below. If you haven't guessed already, my interests broadly lie within the realms of machine learning and large data sets. I'm always interested in discussing new ideas or learning about new projects. If you wish to contact me, please feel free to send an email to <a href=\"mailto:aditya.m.taparia@gmail.com\">aditya.m.taparia@gmail.com</a>.</p>",
+  "education" : [
+    {
+      "name" : "Arizona State University",
+      "duration" : "August 2023 - May 2025",
+      "course" : "MS in Computer Science",
+      "logo" : "asu.jpeg",
+      "comment" : "<p>I am currently pursuing my Masters in Computer Science at Arizona State University.</p>"
+    },
+    {
+      "name" : "Indian Institute of Information Technology Kottayam",
+      "duration" : "August 2019 - May 2023",
+      "course" : "Bachelor of Technology (Hons.) in Computer Science",
+      "logo" : "iiitk.jpeg",
+      "comment" : "<p>I completed my Bachelors with Honors in Computer Science and Engineering with CGPA of 8.6/10.</p>"
+    },
+    {
+      "name" : "S.B.R. Maheshwari Vidyapeeth",
+      "duration" : "April 2016 - May 2019",
+      "course" : "Secondary and Higher Secondary Education",
+      "logo" : "mvp.jpeg",
+      "comment" : "<p>Class 12<sup>th</sup> (CBSE): <ul> <li> Passed with an aggregated percentage of 92.6%. </li> <li> Specialised in Physics, Chemistry, and Maths with Informatics Practice. </li> </ul> </p> <p>Class 10<sup>th</sup> (CBSE):<ul> <li> Passed with an aggregated CGPA of 9.0. </li> </ul> </p>"
+    }
+  ],
+  "project" : [
+    {
+      "name" : "MSLSTMA : An efficient stock price prediction mechanism",
+      "tag" : ["Time Series", "Forecasting", "LSTM", "Deep Learning"],
+      "duration" : "August 2022 - April 2023",
+      "description" : "We have developed a model for stock price prediction which employs OHLCV data to predict future stock price. We have compared its performance with other popular models and have found that our model outperforms them in terms of accuracy.",
+      "github_link" : "",
+      "image" : "project_1.png"
+    },
+    {
+      "name" : "HPix : Vector Map Generation from Satellite Images",
+      "tag" : [
+        "Generative Networks",
+        "Image-to-Image Translation",
+        "Computer Vision",
+        "Deep Learning"
+      ],
+      "duration" : "January 2022 - April 2023",
+      "description" : "I have implemented a novel conditional generative adversarial network (cGAN) called HPix (Hierarchical Pix) that learns a mapping from input images to output images. I have trained this network to generate a vector base map from the satellite image. This network has outperformed various state-of-the-art models.",
+      "github_link" : "",
+      "image" : "project_2.jpg"
+    },
+    {
+      "name": "Learn It : E learning application",
+      "tag": ["Flutter", "Firebase", "Mobile App Development"],
+      "duration": "August 2021 - November 2021",
+      "description": "This is a Flutter Firebase application that provides a platform for teachers to share their knowledge through recorded lectures and students to access and engage with the content.",
+      "github_link": "https://github.com/aditya-taparia/Learn-It",
+      "image": ""
+    },
+    {
+      "name": "BOROMap : Online tool for lending and borrowing",
+      "tag": ["MERN Stack", "MapboxGL", "Web Development"],
+      "duration": "April 2021 - May 2021",
+      "description": "This application enables users to easily lend or borrow items within their local community, with the frontend implemented using ReactJS, MapboxGL, and ExpressJS and the backend supported by MongoDB.",
+      "github_link": "https://github.com/aditya-taparia/BOROMap",
+      "image": "project_4.jpg"
+    }
+  ],
+  "publications" : [
+    {
+      "name" : "\"An Efficient Stock Price Prediction Mechanism Using Multivariate Sequential LSTM Autoencoder\". A. Taparia et al., The Journal of Supercomputing, Springer.",
+      "status" : "Under Review",
+      "link" : "https://doi.org/10.21203/rs.3.rs-2599921/v1"
+    },
+    {
+      "name": "\"HPix: A Novel Hierarchical Approach for the Generation of an Interactive Vector Tile Map from Satellite Imagery\". A. Taparia et al., Computers, Environment and Urban Systems Journal, Springer.",
+      "status": "Submitted",
+      "link" : ""
+    }
+  ],
+  "experience" : [
+    {
+      "name" : "Wathare Infotech Solutions",
+      "duration" : "December 2021 - April 2022",
+      "role" : "Flutter Developer Intern",
+      "small_desc" : "<p>Collaborated with a four-person team to develop client and operator side system for managing machine scheduling task of CNC machines.</p>",
+      "description" : "<p>Collaborated with a four-person team to develop client, admin, manager and operator side interface to manage multiple machine scheduling task for CNC machines. We used flutter for front-end and Rest API and Postgresql database for back-end connectivity. I worked on improving the platform to make it more fast, interactive and user friendly.</p>",
+      "image" : "wathare.jpeg"
+    },
+    {
+      "name": "Sapio Analytics",
+      "duration": "December 2021 - March 2022",
+      "role": "Flutter Developer Intern",
+      "small_desc": "<p>Worked with a team of flutter developers to developed an application named smart cop. This application is designed to help first responders to respond to emergencies faster and more efficiently.</p>",
+      "description": "<p>Worked with a team of flutter developers to develop an application for modern day cop called smart cop, which is a tool that empowers front-line Police Officers who are on beat towards achieving Global Policing Standards. I worked on connecting front end application with AWS as back end and successfully deployed and tested a few beta version of the application. Worked on improving the user interface and adding interactive features to the application with design team. Also worked on solving some logical problems with back end team.</p>",
+      "image": "sapio.jpeg"
+    },
+    {
+      "name": "GeeksForGeeks",
+      "duration": "March 2020 - January 2021",
+      "role": "Technical Content Writer",
+      "small_desc": "<p>Published more than 200 articles covering various technical domains including Python programming, Machine Learning, and Deep Learning. Check out my <a href=\"https://auth.geeksforgeeks.org/user/aditya_taparia/articles\">contributions</a>.</p>",
+      "description": "<p>I drafted and published more than 200 articles covering various technical domains including Python programming, Machine Learning, and Deep Learning. I also worked on improving some existing articles by elaborating the description, adding more examples and adding interactive illustrations for better understanding. Check out my <a href=\"https://auth.geeksforgeeks.org/user/aditya_taparia/articles\">contributions</a>.</p>",
+      "image": "gfg.jpeg"
+    }
+],
+  "contact" : {
+    "address" : "Aditya Taparia, Arizona State University, Tempe, AZ 85281",
+    "email" : "aditya.m.taparia@gmail.com",
+    "phone" : "+916353757151"
+  }
+}
