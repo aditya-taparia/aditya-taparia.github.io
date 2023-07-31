@@ -6,21 +6,21 @@
       "name" : "Arizona State University",
       "duration" : "August 2023 - May 2025",
       "course" : "MS in Computer Science",
-      "logo" : "asu.jpeg",
+      "logo" : "asu.jpg",
       "comment" : "<p>I am currently pursuing my Masters in Computer Science at Arizona State University.</p>"
     },
     {
       "name" : "Indian Institute of Information Technology Kottayam",
       "duration" : "August 2019 - May 2023",
       "course" : "Bachelor of Technology (Hons.) in Computer Science",
-      "logo" : "iiitk.jpeg",
+      "logo" : "iiitk.jpg",
       "comment" : "<p>I completed my Bachelors with Honors in Computer Science and Engineering with CGPA of 8.6/10.</p>"
     },
     {
       "name" : "S.B.R. Maheshwari Vidyapeeth",
       "duration" : "April 2016 - May 2019",
       "course" : "Secondary and Higher Secondary Education",
-      "logo" : "mvp.jpeg",
+      "logo" : "mvp.jpg",
       "comment" : "<p>Class 12<sup>th</sup> (CBSE): <ul> <li> Passed with an aggregated percentage of 92.6%. </li> <li> Specialised in Physics, Chemistry, and Maths with Informatics Practice. </li> </ul> </p> <p>Class 10<sup>th</sup> (CBSE):<ul> <li> Passed with an aggregated CGPA of 9.0. </li> </ul> </p>"
     }
   ],
@@ -70,8 +70,8 @@
       "link" : "https://doi.org/10.21203/rs.3.rs-2599921/v1"
     },
     {
-      "name": "\"HPix: A Novel Hierarchical Approach for the Generation of an Interactive Vector Tile Map from Satellite Imagery\". A. Taparia et al., Computers, Environment and Urban Systems Journal, Springer.",
-      "status": "Submitted",
+      "name": "\"HPix: A Novel Hierarchical Approach for the Generation of an Interactive Vector Tile Map from Satellite Imagery\". A. Taparia et al., Environment and Planning B: Urban Analytics and City Science Journal, SageJournals.",
+      "status": "Under Review",
       "link" : ""
     }
   ],
@@ -82,7 +82,7 @@
       "role" : "Flutter Developer Intern",
       "small_desc" : "<p>Collaborated with a four-person team to develop client and operator side system for managing machine scheduling task of CNC machines.</p>",
       "description" : "<p>Collaborated with a four-person team to develop client, admin, manager and operator side interface to manage multiple machine scheduling task for CNC machines. We used flutter for front-end and Rest API and Postgresql database for back-end connectivity. I worked on improving the platform to make it more fast, interactive and user friendly.</p>",
-      "image" : "wathare.jpeg"
+      "image" : "wathare.jpg"
     },
     {
       "name": "Sapio Analytics",
@@ -90,7 +90,7 @@
       "role": "Flutter Developer Intern",
       "small_desc": "<p>Worked with a team of flutter developers to developed an application named smart cop. This application is designed to help first responders to respond to emergencies faster and more efficiently.</p>",
       "description": "<p>Worked with a team of flutter developers to develop an application for modern day cop called smart cop, which is a tool that empowers front-line Police Officers who are on beat towards achieving Global Policing Standards. I worked on connecting front end application with AWS as back end and successfully deployed and tested a few beta version of the application. Worked on improving the user interface and adding interactive features to the application with design team. Also worked on solving some logical problems with back end team.</p>",
-      "image": "sapio.jpeg"
+      "image": "sapio.jpg"
     },
     {
       "name": "GeeksForGeeks",
@@ -98,7 +98,7 @@
       "role": "Technical Content Writer",
       "small_desc": "<p>Published more than 200 articles covering various technical domains including Python programming, Machine Learning, and Deep Learning. Check out my <a href=\"https://auth.geeksforgeeks.org/user/aditya_taparia/articles\">contributions</a>.</p>",
       "description": "<p>I drafted and published more than 200 articles covering various technical domains including Python programming, Machine Learning, and Deep Learning. I also worked on improving some existing articles by elaborating the description, adding more examples and adding interactive illustrations for better understanding. Check out my <a href=\"https://auth.geeksforgeeks.org/user/aditya_taparia/articles\">contributions</a>.</p>",
-      "image": "gfg.jpeg"
+      "image": "gfg.jpg"
     }
 ],
   "contact" : {
