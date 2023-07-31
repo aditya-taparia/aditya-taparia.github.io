@@ -44117,7 +44117,7 @@ A.BH.prototype={
 a9(){return new A.YY(A.V(B.d.aC(127.5),236,239,241),B.j)}}
 A.YY.prototype={
 E(a){var s=this,r=null,q=A.di(20),p=s.d,o=A.di(10),n=s.a,m=t.p
-return new A.b2(B.iE,A.fh(A.a8h(new A.b2(B.fh,A.cK(A.a([A.d3(A.a([A.bb(r,r,B.k,r,r,new A.bY(r,A.aH5(B.D,r,B.eP,new A.i5(n.r,r,r),r),r,o,r,r,r,B.N),r,60,r,r,r,r,r,60),B.bo,A.fL(A.cK(A.a([A.bv(n.c,A.df(r,r,A.K(a).fr,r,r,r,r,r,"VarelaRound",r,r,18,r,r,B.L,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.bv(s.a.d,B.Bk,r,r)],m),B.aM,B.B,B.t,r,B.C),1)],m),B.v,B.B,B.t),B.dp,A.n9(r,r,B.am,r,r,!0,r,A.f4(A.a([A.f4(r,r,r,B.Bl,s.a.e)],t.Ne),r,r,B.Bm,"Course: "),B.af,r,r,1,B.a0),B.bV,A.adC(s.a.f,new A.atP(),B.Bf),B.bV],m),B.aM,B.B,B.t,r,B.C),r),r,p,0,r,new A.cs(q,B.r),r),B.aL,r,new A.atQ(s),new A.atR(s),r),r)}}
+return new A.b2(B.iE,A.fh(A.a8h(new A.b2(B.fh,A.cK(A.a([A.d3(A.a([A.bb(r,r,B.k,r,r,new A.bY(r,A.aH5(B.D,r,B.eP,new A.i5("assets/"+n.r,r,r),r),r,o,r,r,r,B.N),r,60,r,r,r,r,r,60),B.bo,A.fL(A.cK(A.a([A.bv(n.c,A.df(r,r,A.K(a).fr,r,r,r,r,r,"VarelaRound",r,r,18,r,r,B.L,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.bv(s.a.d,B.Bk,r,r)],m),B.aM,B.B,B.t,r,B.C),1)],m),B.v,B.B,B.t),B.dp,A.n9(r,r,B.am,r,r,!0,r,A.f4(A.a([A.f4(r,r,r,B.Bl,s.a.e)],t.Ne),r,r,B.Bm,"Course: "),B.af,r,r,1,B.a0),B.bV,A.adC(s.a.f,new A.atP(),B.Bf),B.bV],m),B.aM,B.B,B.t,r,B.C),r),r,p,0,r,new A.cs(q,B.r),r),B.aL,r,new A.atQ(s),new A.atR(s),r),r)}}
 A.atQ.prototype={
 $1(a){var s=this.a
 s.O(new A.atO(s))},
@@ -44168,7 +44168,7 @@ A.qz.prototype={
 a9(){return new A.Za(A.V(B.d.aC(127.5),236,239,241),B.j)}}
 A.Za.prototype={
 E(a){var s=this,r=null,q=A.di(20),p=s.d,o=A.di(10),n=s.a,m=t.p
-return new A.b2(B.iE,A.fh(A.a8h(new A.b2(B.fh,A.cK(A.a([B.hf,A.d3(A.a([A.bb(r,r,B.k,r,r,new A.bY(r,A.aH5(B.D,r,B.eP,new A.i5(n.r,r,r),r),r,o,r,r,r,B.N),r,60,r,r,r,r,r,60),B.bo,A.fL(A.cK(A.a([A.bv(n.c,A.df(r,r,A.K(a).fr,r,r,r,r,r,"VarelaRound",r,r,18,r,r,B.L,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.bv(s.a.d,B.Bk,r,r)],m),B.aM,B.B,B.t,r,B.C),1)],m),B.v,B.B,B.t),B.bV,A.n9(r,r,B.am,r,r,!0,r,A.f4(A.a([A.f4(r,r,r,B.Bl,s.a.e)],t.Ne),r,r,B.Bm,"Position: "),B.af,r,r,1,B.a0),B.bV,A.adC(s.a.f,new A.au5(),B.Bf),B.hf],m),B.aM,B.B,B.t,r,B.C),r),r,p,0,r,new A.cs(q,B.r),r),B.aL,r,new A.au6(s),new A.au7(s),r),r)}}
+return new A.b2(B.iE,A.fh(A.a8h(new A.b2(B.fh,A.cK(A.a([B.hf,A.d3(A.a([A.bb(r,r,B.k,r,r,new A.bY(r,A.aH5(B.D,r,B.eP,new A.i5("assets/"+n.r,r,r),r),r,o,r,r,r,B.N),r,60,r,r,r,r,r,60),B.bo,A.fL(A.cK(A.a([A.bv(n.c,A.df(r,r,A.K(a).fr,r,r,r,r,r,"VarelaRound",r,r,18,r,r,B.L,r,r,!0,r,r,r,r,r,r,r,r),r,r),A.bv(s.a.d,B.Bk,r,r)],m),B.aM,B.B,B.t,r,B.C),1)],m),B.v,B.B,B.t),B.bV,A.n9(r,r,B.am,r,r,!0,r,A.f4(A.a([A.f4(r,r,r,B.Bl,s.a.e)],t.Ne),r,r,B.Bm,"Position: "),B.af,r,r,1,B.a0),B.bV,A.adC(s.a.f,new A.au5(),B.Bf),B.hf],m),B.aM,B.B,B.t,r,B.C),r),r,p,0,r,new A.cs(q,B.r),r),B.aL,r,new A.au6(s),new A.au7(s),r),r)}}
 A.au6.prototype={
 $1(a){var s=this.a
 s.O(new A.au4(s))},
