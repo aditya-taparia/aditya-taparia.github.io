@@ -1,6 +1,6 @@
 {
-  "note" : "This website was last updated on 1st March 2023.",
-  "about": "<p>I am a graduate student pursuing a Bachelor's in Computer Science & Engineering (Hons.) at <a href=\"https://www.iiitkottayam.ac.in/#!/home\">Indian Institute of Information Technology - Kottayam</a>. Currently, I am conducting research for my thesis project under <a href=\"https://www.iiitkottayam.ac.in/#!/faculty/lincy\">Dr. Rubell Marion Lincy G</a>. My project focuses on optimal portfolio allocation based on the user's specified level of risk tolerance. We have implemented various stock price prediction models to achieve this, including gated recurrent unit networks, generative adversarial networks, and long short-term memory networks. Additionally, we have developed an innovative model for the same. Our research aims to forecast prices and allocate investments based on the predicted level of risk. We are currently working on the portfolio allocation segment of the project.</p> <p>You can also find some of my previous projects below. If you haven't guessed already, my interests broadly lie within the realms of machine learning and large data sets. I'm always interested in discussing new ideas or learning about new projects. If you wish to contact me, please feel free to send an email to <a href=\"mailto:aditya.m.taparia@gmail.com\">aditya.m.taparia@gmail.com</a>.</p>",
+  "note" : "This website was last updated on 1st August 2023.",
+  "about": "<p>I am a graduate student pursuing my Master's in Computer Science at <a href=\"https://www.asu.edu\">Arizona State University</a>. I have completed my Bachelor's in Computer Science & Engineering with honors from <a href=\"https://www.iiitkottayam.ac.in/#!/home\">Indian Institute of Information Technology - Kottayam</a>.</p> <p>I had worked under <a href=\"https://www.iiitkottayam.ac.in/#!/faculty/keshab\">Dr. Keshab Nath</a> for my honor’s thesis project. My project focused on using generative networks to convert satellite images to interactive vector maps. We worked on a novel approach for converting satellite images to vector maps and then used other deep-learning techniques to highlight road intersections and separate buildings based on sizes. I had also worked under <a href=\"https://www.iiitkottayam.ac.in/#!/faculty/lincy\">Dr. Rubell Marion Lincy G</a> for my bachelor’s thesis project. My project was focused on finding optimal portfolio allocation based on the user's specified level of risk tolerance. We have implemented various stock price prediction models to achieve this, including gated recurrent unit networks, generative adversarial networks, and long short-term memory networks. Additionally, we have developed an innovative model for the same. Our research aims to forecast prices and allocate investments based on the predicted level of risk.</p> <p>If you haven't guessed already, my interests broadly lie within the realms of artificial intelligence and machine learning. I'm always interested in discussing new ideas or learning about new projects. If you wish to contact me, please feel free to send an email to <a href=\"mailto:ataparia@asu.edu\">ataparia@asu.edu</a>.</p>",
   "education" : [
     {
       "name" : "Arizona State University",
@@ -66,7 +66,7 @@
   "publications" : [
     {
       "name" : "\"An Efficient Stock Price Prediction Mechanism Using Multivariate Sequential LSTM Autoencoder\". A. Taparia et al., The Journal of Supercomputing, Springer.",
-      "status" : "Under Review",
+      "status" : "Posted",
       "link" : "https://doi.org/10.21203/rs.3.rs-2599921/v1"
     },
     {
@@ -103,7 +103,7 @@
 ],
   "contact" : {
     "address" : "Aditya Taparia, Arizona State University, Tempe, AZ 85281",
-    "email" : "aditya.m.taparia@gmail.com",
+    "email" : "ataparia@asu.edu",
     "phone" : "+916353757151"
   }
 }

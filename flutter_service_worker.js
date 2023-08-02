@@ -3,10 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"index.html": "2b46f9ed70ce1d6b90c3833e3f67cd6d",
-"/": "2b46f9ed70ce1d6b90c3833e3f67cd6d",
+const RESOURCES = {"index.html": "0ea04a95be567f737f4f72ff99c19f4c",
+"/": "0ea04a95be567f737f4f72ff99c19f4c",
 "flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
-"main.dart.js": "fc71b73c4a2ca0e16c230068336ced96",
+"main.dart.js": "506037820443fecb826f478fd3982871",
 "version.json": "d52074dff00ac68823d510b883bb87b5",
 "canvaskit/chromium/canvaskit.js": "8c8392ce4a4364cbb240aa09b5652e05",
 "canvaskit/chromium/canvaskit.wasm": "fc18c3010856029414b70cae1afc5cd9",
@@ -1018,7 +1018,7 @@ const RESOURCES = {"index.html": "2b46f9ed70ce1d6b90c3833e3f67cd6d",
 "assets/assets/wathare.jpg": "0e8d7da0054268e33eb81f310e03d8c7",
 "assets/assets/sapio.jpg": "c977a09e22e2691cde1dc0f2600e912a",
 "assets/assets/Resume.pdf": "65d63edb4497564a5dd9188a2fcf65ab",
-"assets/assets/data.json": "55b183f4f0506f2b7d15075b9a820e75",
+"assets/assets/data.json": "8fbada697692b7c4c57528ff27daf1f7",
 "assets/assets/asu.jpg": "7cafeb32ab6313346a4e7bf8e79ae9bf",
 "icons/favicon-16x16.png": "a35979bf1d42eeb3006e796624d4fd7a",
 "icons/favicon-32x32.png": "eeb19dde5c4297d10e27e0d8a05685c0",
