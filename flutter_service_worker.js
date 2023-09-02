@@ -4,7 +4,7 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
 const RESOURCES = {"assets/assets/project_2.jpg": "f3d3f50a4e91dad154c8247b2ff9e9d9",
-"assets/assets/data.json": "cfd9341cf3abf7b8507493da1d136583",
+"assets/assets/data.json": "fe445b493ec438d1cb547a4cbd7aaaa7",
 "assets/assets/myself.jpg": "21a51d4c09ed17fc674a2dcc7b46f94c",
 "assets/assets/iiitk.jpg": "fcd85934933f847207a9f56e37eb3957",
 "assets/assets/sapio.jpg": "c977a09e22e2691cde1dc0f2600e912a",
@@ -1009,8 +1009,8 @@ const RESOURCES = {"assets/assets/project_2.jpg": "f3d3f50a4e91dad154c8247b2ff9e
 "version.json": "d52074dff00ac68823d510b883bb87b5",
 "favicon.ico": "43faca19ba104a515df4ddf13824fee1",
 "manifest.json": "ed38b713d4d96958f44e6cd4924e256c",
-"index.html": "644d46a0060ddf1e443c769890ed4b4a",
-"/": "644d46a0060ddf1e443c769890ed4b4a",
+"index.html": "8267136103bcf83d15cef9bc2374899d",
+"/": "8267136103bcf83d15cef9bc2374899d",
 "flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
 "icons/Icon-192.png": "3116e3b6ce71add664ca19d89c60919c",
 "icons/favicon-32x32.png": "eeb19dde5c4297d10e27e0d8a05685c0",
