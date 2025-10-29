@@ -429,23 +429,8 @@
 
    
   <script>
-    function loadPublicationsDirectly(publicationsData) {
-      const conferencesContainer = document.getElementById('conferences-container');
-      const workshopsContainer = document.getElementById('workshops-container');
-      
-      if (!conferencesContainer || !workshopsContainer) {
-        console.error('Publication containers not found');
-        return;
-      }
-      
-      console.log('Loading publications...');
-      
-      // Clear existing content
-      conferencesContainer.innerHTML = '';
-      workshopsContainer.innerHTML = '';
-      
-      publicationsData.forEach(function(paper, index) {
-        const bibId = 'bib' + (index + 1);
+    function createPublicationRow(paper, index) {
+      const bibId = 'bib' + index;
         
         // Create table row
         const row = document.createElement('tr');
@@ -543,13 +528,44 @@
         row.appendChild(imageCell);
         row.appendChild(contentCell);
         
+        return row;
+    }
+
+    function loadPublicationsDirectly(publicationsData) {
+      const allContainer = document.getElementById('all-container');
+      const conferencesContainer = document.getElementById('conferences-container');
+      const workshopsContainer = document.getElementById('workshops-container');
+      
+      if (!allContainer || !conferencesContainer || !workshopsContainer) {
+        console.error('Publication containers not found');
+        return;
+      }
+      
+      console.log('Loading publications...');
+      
+      // Clear existing content
+      allContainer.innerHTML = '';
+      conferencesContainer.innerHTML = '';
+      workshopsContainer.innerHTML = '';
+      
+      // Populate all publications tab with same order as JSON
+      publicationsData.forEach(function(paper, index) {
+        const row = createPublicationRow(paper, 'all' + index);
+        allContainer.appendChild(row);
+      });
+      
+      // Populate categorized tabs
+      publicationsData.forEach(function(paper, index) {
         // Determine which container to append to based on type field
         if (paper.type === 'conference') {
+          const row = createPublicationRow(paper, 'conf' + index);
           conferencesContainer.appendChild(row);
         } else if (paper.type === 'workshop') {
+          const row = createPublicationRow(paper, 'workshop' + index);
           workshopsContainer.appendChild(row);
         } else {
           // Default to workshops for any other type
+          const row = createPublicationRow(paper, 'workshop' + index);
           workshopsContainer.appendChild(row);
         }
       });

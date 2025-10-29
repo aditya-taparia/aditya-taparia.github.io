@@ -9,12 +9,19 @@
 
 <!-- Tab Navigation -->
 <div class="tab-navigation">
-    <button class="tab-button active" onclick="switchTab('conferences')">Publications</button>
+    <button class="tab-button active" onclick="switchTab('all')">All</button>
+    <button class="tab-button" onclick="switchTab('conferences')">Conferences</button>
     <button class="tab-button" onclick="switchTab('workshops')">Workshops/Preprints</button>
 </div>
 
 <!-- Tab Content -->
-<div id="conferences-tab" class="tab-content active">
+<div id="all-tab" class="tab-content active">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5" class="publications-table" id="all-container" style="width: 100%; table-layout: fixed;">
+        <!-- All publications will be loaded here dynamically -->
+    </table>
+</div>
+
+<div id="conferences-tab" class="tab-content">
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5" class="publications-table" id="conferences-container" style="width: 100%; table-layout: fixed;">
         <!-- Conference publications will be loaded here dynamically -->
     </table>

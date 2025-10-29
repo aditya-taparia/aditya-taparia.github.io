@@ -1,32 +1,4 @@
 [
-  {  
-    "id": "vlc_fusion",
-    "title": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
-    "authors": "Aditya Taparia, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake",
-    "venue": "arXiv preprint",
-    "year": "2025",
-    "image": "images/vlc_fusion.png",
-    "description": "We introduce VLC Fusion, a novel vision-language conditioned sensor fusion framework that enhances object detection robustness by leveraging environmental cues for improving performance.",
-    "links": {
-      "pdf": "https://arxiv.org/abs/2505.12715"
-    },
-    "bibtex": "@article{taparia2025vlc},\n    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},\n    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},\n    journal={arXiv preprint arXiv:2505.12715},\n    year={2025}\n}",
-    "type": "workshop"
-  },
-  {
-    "id": "mds_a",
-    "title": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
-    "authors": "Noel Ngu, Aditya Taparia, Gerardo I. Simari, Mario Leiva, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran",
-    "venue": "AAAI Make Symposium",
-    "year": "2025",
-    "image": "images/mdsa.png",
-    "description": "We present MDS-A, a comprehensive dataset designed for evaluating test-time error detection and model adaptation strategies in aerial imagery scenarios with multiple distribution shifts.",
-    "links": {
-      "pdf": "https://arxiv.org/abs/2502.13289"
-    },
-    "bibtex": "@inproceedings{ngu2025multiple},\n    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I and Leiva, Mario and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D and Corcoran, John},\n    title={Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation},\n    booktitle={Proceedings of the AAAI Symposium Series},\n    year = {2025},\n    volume = {5},\n    pages = {379--383}\n}",
-    "type": "workshop"
-  },
   {
     "id": "genxai",
     "title": "Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations",
@@ -58,6 +30,34 @@
     },
     "bibtex": "@article{sagar2024trustworthy,\n    title={Trustworthy Conceptual Explanations for Neural Networks in Robot Decision-Making},\n    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},\n    journal={arXiv preprint arXiv:2409.10733},\n    year={2024}\n}",
     "type": "conference"
+  },
+  {  
+    "id": "vlc_fusion",
+    "title": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
+    "authors": "Aditya Taparia, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake",
+    "venue": "arXiv preprint",
+    "year": "2025",
+    "image": "images/vlc_fusion.png",
+    "description": "We introduce VLC Fusion, a novel vision-language conditioned sensor fusion framework that enhances object detection robustness by leveraging environmental cues for improving performance.",
+    "links": {
+      "pdf": "https://arxiv.org/abs/2505.12715"
+    },
+    "bibtex": "@article{taparia2025vlc},\n    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},\n    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},\n    journal={arXiv preprint arXiv:2505.12715},\n    year={2025}\n}",
+    "type": "workshop"
+  },
+  {
+    "id": "mds_a",
+    "title": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
+    "authors": "Noel Ngu, Aditya Taparia, Gerardo I. Simari, Mario Leiva, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran",
+    "venue": "AAAI Make Symposium",
+    "year": "2025",
+    "image": "images/mdsa.png",
+    "description": "We present MDS-A, a comprehensive dataset designed for evaluating test-time error detection and model adaptation strategies in aerial imagery scenarios with multiple distribution shifts.",
+    "links": {
+      "pdf": "https://arxiv.org/abs/2502.13289"
+    },
+    "bibtex": "@inproceedings{ngu2025multiple},\n    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I and Leiva, Mario and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D and Corcoran, John},\n    title={Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation},\n    booktitle={Proceedings of the AAAI Symposium Series},\n    year = {2025},\n    volume = {5},\n    pages = {379--383}\n}",
+    "type": "workshop"
   },
   {
     "id": "expressivityarena",
