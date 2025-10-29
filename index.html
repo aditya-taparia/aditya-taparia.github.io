@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-   
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
     <style type="text/css">
@@ -237,7 +238,7 @@
     .publications-table {
       margin-top: 20px;
       border-collapse: separate;
-      border-spacing: 0 20px; /* vertical spacing */
+      border-spacing: 0 10px; /* Reduced vertical spacing */
     }
 
     .modal {
@@ -290,10 +291,92 @@
       background-color: rgba(0,0,0,1);
     }
     
-    /* Simple “drop from top” animation */
+    /* Simple "drop from top" animation */
     @keyframes dropIn {
       from { transform: translateY(-30px); opacity: 0; }
       to   { transform: translateY(0);    opacity: 1; }
+    }
+
+    /* Tab Navigation Styles */
+    .tab-navigation {
+      display: flex;
+      margin: 20px 0 10px 0;
+      border-bottom: 2px solid #e0e0e0;
+      position: relative;
+    }
+
+    .tab-button {
+      background: none;
+      border: none;
+      padding: 12px 24px;
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #666;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: color 0.3s ease;
+      margin-right: 20px;
+      position: relative;
+    }
+
+    .tab-button:hover {
+      color: #316CAD;
+    }
+
+    .tab-button.active {
+      color: #316CAD;
+      font-weight: 600;
+    }
+
+    /* Animated underline */
+    .tab-button::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: #316CAD;
+      transition: width 0.3s ease;
+    }
+
+    .tab-button.active::after {
+      width: 100%;
+    }
+
+    .tab-content {
+      display: none;
+      min-height: 200px; /* Prevent layout shift */
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Ensure tables have consistent width */
+    .tab-content table {
+      width: 100% !important;
+      table-layout: fixed;
+    }
+
+    /* Control publication table cell spacing */
+    .publications-table td:first-child {
+      width: 18% !important;
+      padding-right: 8px;
+      vertical-align: top;
+    }
+
+    .publications-table td:last-child {
+      width: 82% !important;
+    }
+
+    /* Ensure images don't overflow their containers */
+    .publications-table td:first-child img {
+      max-width: 100%;
+      height: auto;
     }
   </style>
    
@@ -346,19 +429,175 @@
 
    
   <script>
+    function loadPublicationsDirectly(publicationsData) {
+      const conferencesContainer = document.getElementById('conferences-container');
+      const workshopsContainer = document.getElementById('workshops-container');
+      
+      if (!conferencesContainer || !workshopsContainer) {
+        console.error('Publication containers not found');
+        return;
+      }
+      
+      console.log('Loading publications...');
+      
+      // Clear existing content
+      conferencesContainer.innerHTML = '';
+      workshopsContainer.innerHTML = '';
+      
+      publicationsData.forEach(function(paper, index) {
+        const bibId = 'bib' + (index + 1);
+        
+        // Create table row
+        const row = document.createElement('tr');
+        
+        // Create image cell
+        const imageCell = document.createElement('td');
+        imageCell.setAttribute('width', '18%');
+        imageCell.style.width = '18%';
+        imageCell.style.paddingRight = '8px';
+        imageCell.style.verticalAlign = 'top';
+        const img = document.createElement('img');
+        img.src = paper.image;
+        img.width = 150;
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+        imageCell.appendChild(img);
+        
+        // Create content cell
+        const contentCell = document.createElement('td');
+        contentCell.setAttribute('width', '82%');
+        contentCell.setAttribute('valign', 'top');
+        contentCell.style.width = '82%';
+        
+        // Create paper title
+        const title = document.createElement('papertitle');
+        title.textContent = paper.title;
+        contentCell.appendChild(title);
+        contentCell.appendChild(document.createElement('br'));
+        
+        // Create authors with bold name
+        const authorsText = paper.authors.replace('Aditya Taparia', '<strong>Aditya Taparia</strong>');
+        const authorsSpan = document.createElement('span');
+        authorsSpan.innerHTML = authorsText;
+        contentCell.appendChild(authorsSpan);
+        contentCell.appendChild(document.createElement('br'));
+        
+        // Create venue
+        const venueElement = document.createElement('em');
+        venueElement.textContent = paper.venue + ', ' + paper.year;
+        contentCell.appendChild(venueElement);
+        contentCell.appendChild(document.createElement('br'));
+        
+        // Create description
+        const description = document.createElement('div');
+        description.className = 'description';
+        description.textContent = paper.description;
+        contentCell.appendChild(description);
+        
+        // Create buttons
+        if (paper.links.pdf) {
+          const pdfBtn = document.createElement('a');
+          pdfBtn.href = paper.links.pdf;
+          pdfBtn.className = 'btn btn-publication';
+          pdfBtn.target = '_blank';
+          pdfBtn.innerHTML = '<span class="material-icons">picture_as_pdf</span> PDF';
+          contentCell.appendChild(pdfBtn);
+        }
+        
+        if (paper.links.video) {
+          const videoBtn = document.createElement('a');
+          videoBtn.href = 'javascript:void(0)';
+          videoBtn.className = 'btn btn-video btn-publication';
+          videoBtn.onclick = function() { openModal(paper.links.video); };
+          videoBtn.innerHTML = '<span class="material-icons">play_circle</span> Video';
+          contentCell.appendChild(videoBtn);
+        }
+        
+        if (paper.links.code) {
+          const codeBtn = document.createElement('a');
+          codeBtn.href = paper.links.code;
+          codeBtn.className = 'btn btn-publication';
+          codeBtn.target = '_blank';
+          codeBtn.innerHTML = '<span class="material-icons">code</span> Code';
+          contentCell.appendChild(codeBtn);
+        }
+        
+        // Create BibTeX button
+        const bibBtn = document.createElement('a');
+        bibBtn.href = 'javascript:void(0)';
+        bibBtn.className = 'btn btn-publication';
+        bibBtn.onclick = function() { toggleBib(bibId); };
+        bibBtn.innerHTML = '<span class="material-icons">format_quote</span> BibTeX';
+        contentCell.appendChild(bibBtn);
+        
+        // Create BibTeX content
+        const bibDiv = document.createElement('div');
+        bibDiv.id = bibId;
+        bibDiv.className = 'bibtex';
+        const pre = document.createElement('pre');
+        pre.textContent = paper.bibtex;
+        bibDiv.appendChild(pre);
+        contentCell.appendChild(bibDiv);
+        
+        // Append cells to row
+        row.appendChild(imageCell);
+        row.appendChild(contentCell);
+        
+        // Determine which container to append to based on type field
+        if (paper.type === 'conference') {
+          conferencesContainer.appendChild(row);
+        } else if (paper.type === 'workshop') {
+          workshopsContainer.appendChild(row);
+        } else {
+          // Default to workshops for any other type
+          workshopsContainer.appendChild(row);
+        }
+      });
+      
+      console.log('Publications loaded successfully!');
+    }
+
     async function loadContent() {
+      console.log('Starting to load content...');
+      
       const introResponse = await fetch('pages/intro.html');
       const introHtml = await introResponse.text();
       document.getElementById('intro-content').innerHTML = introHtml;
+      console.log('Intro content loaded');
 
       // Fetch and load news content
       const newsResponse = await fetch('pages/news.html');
       const newsHtml = await newsResponse.text();
       document.getElementById('news-content').innerHTML = newsHtml;
+      console.log('News content loaded');
 
       const publicationsResponse = await fetch('pages/publication.html');
       const publicationsHtml = await publicationsResponse.text();
       document.getElementById('publications-content').innerHTML = publicationsHtml;
+      console.log('Publications HTML loaded');
+      
+      // Load publications data from JSON file
+      console.log('Loading publications data from JSON...');
+      try {
+        const publicationsDataResponse = await fetch('data/publications.json');
+        const publicationsData = await publicationsDataResponse.json();
+        console.log('Publications data loaded successfully');
+        
+        // Execute the publication loading with the data
+        console.log('Loading publications directly...');
+        loadPublicationsDirectly(publicationsData);
+      } catch (error) {
+        console.error('Error loading publications data:', error);
+        // Fallback: show error message
+        const conferencesContainer = document.getElementById('conferences-container');
+        const workshopsContainer = document.getElementById('workshops-container');
+        if (conferencesContainer) {
+          conferencesContainer.innerHTML = '<tr><td colspan="2">Error loading publications. Please try again later.</td></tr>';
+        }
+        if (workshopsContainer) {
+          workshopsContainer.innerHTML = '<tr><td colspan="2">Error loading publications. Please try again later.</td></tr>';
+        }
+      }
     }
 
     document.addEventListener('DOMContentLoaded', loadContent);
@@ -367,6 +606,24 @@
   <script>
     function toggleBib(id) {
       document.getElementById(id).classList.toggle('show');
+    }
+  </script>
+
+  <script>
+    function switchTab(tabName) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabContents.forEach(tab => tab.classList.remove('active'));
+      
+      // Remove active class from all buttons
+      const tabButtons = document.querySelectorAll('.tab-button');
+      tabButtons.forEach(button => button.classList.remove('active'));
+      
+      // Show selected tab content
+      document.getElementById(tabName + '-tab').classList.add('active');
+      
+      // Add active class to clicked button
+      event.target.classList.add('active');
     }
   </script>
 

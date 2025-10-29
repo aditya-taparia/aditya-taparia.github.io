@@ -7,186 +7,23 @@
     </tr>
 </table>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="5" class="publications-table">
-    <!-- Paper 1 -->
-    <tr>
-        <td width="25%">
-            <img src="images/GenXAI.jpg" width="150">
-        </td>
-        <td width="75%" valign="top">
-            <papertitle>Explainable Concept Generation through Vision-Language Preference Learning for Understanding
-                Neural Networks' Internal Representations</papertitle><br>
-            <strong>Aditya Taparia</strong>, Som Sagar, Ransalu Senanayake<br>
-            <em>International Conference on Machine Learning (ICML)</em>, 2025
+<!-- Tab Navigation -->
+<div class="tab-navigation">
+    <button class="tab-button active" onclick="switchTab('conferences')">Publications</button>
+    <button class="tab-button" onclick="switchTab('workshops')">Workshops/Preprints</button>
+</div>
 
-            <div class="description">
-                We propose a Reinforcement Learning-based Preference Optimizing exploration (RLPO) method designed to
-                generate explainable states within a classification model, enabling the discovery of interpretable
-                states
-                that may be difficult or impossible for humans to identify.
-            </div>
-
-            <a href="https://arxiv.org/abs/2408.13438" class="btn btn-publication" target="_blank">
-                <span class="material-icons">picture_as_pdf</span> PDF
-            </a>
-            <a class="btn btn-video btn-publication" onclick="openModal('videos/GenXAI Video.mp4')">
-                <span class="material-icons">play_circle</span> Video
-            </a>
-            <a href="https://github.com/aditya-taparia/RLPO" class="btn btn-publication" target="_blank">
-                <span class="material-icons">code</span> Code
-            </a>
-            <a href="javascript:void(0)" class="btn btn-publication" onclick="toggleBib('bib1')">
-                <span class="material-icons">format_quote</span> BibTeX
-            </a>
-            <div id="bib1" class="bibtex"><pre>@article{taparia2024explainable,
-    title={Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations},
-    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},
-    journal={arXiv preprint arXiv:2408.13438},
-    year={2024}
-}</pre></div>
-        </td>
-    </tr>
-
-    <!-- Paper 2 -->
-    <tr>
-        <td width="25%">
-            <img src="images/Neurips_SATA.png" width="150">
-        </td>
-        <td width="75%" valign="top">
-            <papertitle>Trustworthy Explanations for Robot Behaviors</papertitle>
-            <br>
-            Som Sagar*, <strong>Aditya Taparia*</strong>, Harsh Mankodiya, Pranav Bidare, Yifan Zhou, Ransalu
-            Senanayake<br>
-            <em>IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)</em>, 2025
-
-            <div class="description">
-                We introduce BaTCAV, a Bayesian TCAV framework with uncertainty estimations that enhances the
-                interpretability of robotic actions across both simulation platforms and real-world robotic systems.
-            </div>
-
-            <a href="https://arxiv.org/abs/2409.10733" class="btn btn-publication" target="_blank">
-                <span class="material-icons">picture_as_pdf</span> PDF
-            </a>
-            <a class="btn btn-video btn-publication" onclick="openModal('videos/BaTCAVe Video.mp4')">
-                <span class="material-icons">play_circle</span> Video
-            </a>
-            <a href="https://github.com/aditya-taparia/BaTCAVe" class="btn btn-code btn-publication" target="_blank">
-                <span class="material-icons">code</span> Code
-            </a>
-            <a href="javascript:void(0)" class="btn btn-publication" onclick="toggleBib('bib2')">
-                <span class="material-icons">format_quote</span> BibTeX
-            </a>
-            <div id="bib2" class="bibtex"><pre>@article{sagar2024trustworthy,
-    title={Trustworthy Conceptual Explanations for Neural Networks in Robot Decision-Making},
-    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},
-    journal={arXiv preprint arXiv:2409.10733},
-    year={2024}
-}</pre></div>
-        </td>
-    </tr>
-
-    <!-- Paper 3 -->
-    <tr>
-        <td width="25%">
-            <img src="images/Neurips_Behaviour.png" width="150">
-        </td>
-        <td width="75%" valign="top">
-            <papertitle>ExpressivityArena: Can LLMs Express Information Implicitly?</papertitle><br>
-            Joshua Tint, Som Sagar, <strong>Aditya Taparia</strong>, Caleb Liu, Kelly Raines, Bimsara Pathiraja, Ransalu
-            Senanayake<br>
-            <em>NeurIPS Workshop on Behavioral Machine Learning</em>, 2024
-
-            <div class="description">
-                We introduce ExpressivityArena, a framework designed to evaluate the expressiveness of large language
-                models
-                (LLMs), enabling systematic assessment of their ability to convey nuanced and implicit information
-                across
-                various contexts.
-            </div>
-
-            <a href="https://arxiv.org/abs/2411.08010" class="btn btn-publication" target="_blank">
-                <span class="material-icons">picture_as_pdf</span> PDF
-            </a>
-            <a href="javascript:void(0)" class="btn btn-publication" onclick="toggleBib('bib3')">
-                <span class="material-icons">format_quote</span> BibTeX
-            </a>
-            <div id="bib3" class="bibtex"><pre>@inproceedings{tint2024expressivityarena,
-    title={ExpressivityArena: Can LLMs Express Information Implicitly?},
-    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Liu, Caleb and Raines, Kelly and Pathiraja, Bimsara and Senanayake, Ransalu},
-    booktitle={NeurIPS 2024 Workshop on Behavioral Machine Learning},
-    year={2024}
-  }</pre></div>
-        </td>
-    </tr>
-
-    <!-- Paper 4 -->
-    <tr>
-        <td width="25%">
-            <img src="images/Neurips_redteaming.png" width="150">
-        </td>
-        <td width="75%" valign="top">
-            <papertitle>LLM-Assisted Red Teaming of Diffusion Models through “Failures Are Fated, But Can Be Faded”
-            </papertitle><br>
-            Som Sagar, <strong>Aditya Taparia</strong>, Ransalu Senanayake<br>
-            <em>NeurIPS Workshop on Red Teaming GenAI</em>, 2024
-
-            <div class="description">
-                This extension of the Failures Are Fated work demonstrates how we use LLM-assisted methods to generate
-                rewards and states in diffusion models, and incorporate RL search strategies to optimize the discovery
-                process.
-            </div>
-
-            <a href="https://arxiv.org/abs/2410.16738" class="btn btn-publication" target="_blank">
-                <span class="material-icons">picture_as_pdf</span> PDF
-            </a>
-            <a href="javascript:void(0)" class="btn btn-publication" onclick="toggleBib('bib4')">
-                <span class="material-icons">format_quote</span> BibTeX
-            </a>
-            <div id="bib4" class="bibtex"><pre>@inproceedings{sagar2024llm,
-    title={LLM-Assisted Red Teaming of Diffusion Models through “Failures Are Fated, But Can Be Faded”},
-    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},
-    booktitle={Red Teaming GenAI: What Can We Learn from Adversaries?},
-    year={2024}
-}</pre></div>
-        </td>
-    </tr>
-
-    <!-- Paper 5 -->
-    <tr>
-        <td width="25%">
-            <img src="images/ICML_1.png" width="150">
-        </td>
-        <td width="75%" valign="top">
-            <papertitle>Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in
-                Large-Scale Vision and Language Models</papertitle><br>
-            Som Sagar, <strong>Aditya Taparia</strong>, Ransalu Senanayake<br>
-            <em>International Conference on Machine Learning (ICML)</em>, 2024
-
-            <div class="description">
-                We introduce a framework that maps the failure landscape of large vision and language models, addressing
-                their shortcomings by realigning model behavior with human preferences—whether stylistic or ethical—to
-                mitigate failures.
-            </div>
-
-            <a href="https://arxiv.org/abs/2406.07145" class="btn btn-pdf btn-publication" target="_blank">
-                <span class="material-icons">picture_as_pdf</span> PDF
-            </a>
-            <a class="btn btn-video btn-publication" onclick="openModal('videos/Failure Video.mp4')">
-                <span class="material-icons">play_circle</span> Video
-            </a>
-            <a href="https://github.com/somsagar07/FailureShiftRL" class="btn btn-code btn-publication" target="_blank">
-                <span class="material-icons">code</span> Code
-            </a>
-            <a href="javascript:void(0)" class="btn btn-bib btn-publication" onclick="toggleBib('bib5')">
-                <span class="material-icons">format_quote</span> BibTeX
-            </a>
-            <div id="bib5" class="bibtex"><pre>@inproceedings{sagar2024failures,
-    title={Failures are fated, but can be faded: characterizing and mitigating unwanted behaviors in large-scale vision and language models},
-    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},
-    booktitle={Proceedings of the 41st International Conference on Machine Learning},
-    pages={42999--43023},
-    year={2024}
-}</pre></div>
-        </td>
-    </tr>
+<!-- Tab Content -->
+<div id="conferences-tab" class="tab-content active">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5" class="publications-table" id="conferences-container" style="width: 100%; table-layout: fixed;">
+        <!-- Conference publications will be loaded here dynamically -->
     </table>
+</div>
+
+<div id="workshops-tab" class="tab-content">
+    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="5" class="publications-table" id="workshops-container" style="width: 100%; table-layout: fixed;">
+        <!-- Workshop/Preprint publications will be loaded here dynamically -->
+    </table>
+</div>
+
+<!-- Publications will be loaded dynamically by the main page -->
