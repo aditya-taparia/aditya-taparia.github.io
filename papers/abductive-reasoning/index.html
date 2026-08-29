@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments — Aditya Taparia</title>
+<meta name="description" content="Reconciles conflicting predictions from multiple pre-trained perception models under distribution shift by treating it as a test-time consistency-based abduction problem, beating the best single model by ~13.6% F1 across 15 datasets.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/abductive-reasoning/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments — Aditya Taparia">
+<meta property="og:description" content="Reconciles conflicting predictions from multiple pre-trained perception models under distribution shift by treating it as a test-time consistency-based abduction problem, beating the best single model by ~13.6% F1 across 15 datasets.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/abductive-reasoning/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments — Aditya Taparia">
+<meta name="twitter:description" content="Reconciles conflicting predictions from multiple pre-trained perception models under distribution shift by treating it as a test-time consistency-based abduction problem, beating the best single model by ~13.6% F1 across 15 datasets.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments">
+<meta name="citation_author" content="Mario A. Leiva">
+<meta name="citation_author" content="Noel Ngu">
+<meta name="citation_author" content="Joshua Shay Kricheli">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_author" content="Paulo Shakarian">
+<meta name="citation_author" content="Nathaniel D. Bastian">
+<meta name="citation_author" content="John Corcoran">
+<meta name="citation_author" content="Gerardo I. Simari">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_conference_title" content="Proceedings of the AAAI Conference on Artificial Intelligence">
+<meta name="citation_arxiv_id" content="2505.19361">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2505.19361">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/abductive-reasoning/#article",
+  "name": "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments",
+  "headline": "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments",
+  "url": "https://aditya-taparia.github.io/papers/abductive-reasoning/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/abductive-reasoning/",
+  "datePublished": "2026",
+  "inLanguage": "en",
+  "abstract": "When pre-trained perception models are deployed in novel environments, distribution shift makes them disagree. We cast the problem of reconciling those conflicting predictions as consistency-based abduction applied at test time rather than during training, achieving average relative improvements of roughly 13.6% in F1 and 16.6% in accuracy over the best individual model across 15 test datasets.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Mario A. Leiva"
+    },
+    {
+      "@type": "Person",
+      "name": "Noel Ngu"
+    },
+    {
+      "@type": "Person",
+      "name": "Joshua Shay Kricheli"
+    },
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    },
+    {
+      "@type": "Person",
+      "name": "Paulo Shakarian"
+    },
+    {
+      "@type": "Person",
+      "name": "Nathaniel D. Bastian"
+    },
+    {
+      "@type": "Person",
+      "name": "John Corcoran"
+    },
+    {
+      "@type": "Person",
+      "name": "Gerardo I. Simari"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Proceedings of the AAAI Conference on Artificial Intelligence"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "Proceedings of the AAAI Conference on Artificial Intelligence"
+  },
+  "identifier": "arXiv:2505.19361"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments",
+      "item": "https://aditya-taparia.github.io/papers/abductive-reasoning/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>AAAI 2026</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments</h1>
+      <p class="paper-authors">Mario A. Leiva, Noel Ngu, Joshua Shay Kricheli, <strong>Aditya Taparia</strong>, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran, Gerardo I. Simari</p>
+      <p class="paper-meta">Proceedings of the AAAI Conference on Artificial Intelligence, 2026</p>
+      
+      <div class="pub-links"><a href="https://arxiv.org/abs/2505.19361" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a></div>
+    </header>
+
+    
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>When pre-trained perception models are deployed in novel environments, distribution shift makes them disagree. We cast the problem of reconciling those conflicting predictions as consistency-based abduction applied at test time rather than during training, achieving average relative improvements of roughly 13.6% in F1 and 16.6% in accuracy over the best individual model across 15 test datasets.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-abductive-reasoning">@inproceedings{leiva2026consistency,
+    title={Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments},
+    author={Leiva, Mario A. and Ngu, Noel and Kricheli, Joshua Shay and Taparia, Aditya and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John and Simari, Gerardo I.},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+    pages={19216--19223},
+    year={2026}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-abductive-reasoning" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../learning-to-configure/">&larr; arXiv 2026</a> &middot; <a href="../">All publications</a> &middot; <a href="../batcave/">IROS 2025 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

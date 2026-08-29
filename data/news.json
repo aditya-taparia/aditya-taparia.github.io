@@ -1,0 +1,57 @@
+[
+  {
+    "date": "May '26",
+    "sort_key": "2026-05-27",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://arxiv.org/abs/2505.12715\" target=\"_blank\" rel=\"noopener\">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</a>\" was accepted to ECML PKDD'26 and <span class=\"news-highlight-red\">shortlisted for the Best Research Track Student Paper Award 🎗</span>."
+  },
+  {
+    "date": "May '26",
+    "sort_key": "2026-05-01",
+    "html": "Joined <img src=\"images/logos/bosch.png\" alt=\"\" class=\"news-logo\"> <a class=\"news-item-title\" href=\"https://www.bosch.com/research/\" target=\"_blank\" rel=\"noopener\">Bosch</a> as a Research Intern."
+  },
+  {
+    "date": "Jan '26",
+    "sort_key": "2026-01-03",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://aclanthology.org/2026.findings-eacl.235.pdf\" target=\"_blank\" rel=\"noopener\">ExpressivityBench: Can LLMs Communicate Implicitly?</a>\" was accepted to Findings of EACL'26."
+  },
+  {
+    "date": "Nov '25",
+    "sort_key": "2025-11-08",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://arxiv.org/abs/2505.19361\" target=\"_blank\" rel=\"noopener\">Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments</a>\" was accepted to AAAI'26."
+  },
+  {
+    "date": "Jun '25",
+    "sort_key": "2025-06-15",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://arxiv.org/abs/2409.10733\" target=\"_blank\" rel=\"noopener\">BaTCAVe: Trustworthy Explanations for Robot Behaviors</a>\" was accepted to IROS'25."
+  },
+  {
+    "date": "May '25",
+    "sort_key": "2025-05-19",
+    "html": "Joined <img src=\"images/logos/llnl.png\" alt=\"\" class=\"news-logo\"> <a class=\"news-item-title\" href=\"https://www.llnl.gov/\" target=\"_blank\" rel=\"noopener\">Lawrence Livermore National Laboratory</a> as a Student Research Intern in the MIG group."
+  },
+  {
+    "date": "May '25",
+    "sort_key": "2025-05-01",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://arxiv.org/abs/2408.13438\" target=\"_blank\" rel=\"noopener\">Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations</a>\" was accepted to ICML'25."
+  },
+  {
+    "date": "Jan '25",
+    "sort_key": "2025-01-06",
+    "html": "Joined Arizona State University as a PhD student in Computer Science."
+  },
+  {
+    "date": "Dec '24",
+    "sort_key": "2024-12-10",
+    "html": "Presented four workshop papers at NeurIPS'24."
+  },
+  {
+    "date": "May '24",
+    "sort_key": "2024-05-01",
+    "html": "Our paper \"<a class=\"news-item-title\" href=\"https://arxiv.org/abs/2406.07145\" target=\"_blank\" rel=\"noopener\">Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models</a>\" was accepted to ICML'24 as a <span class=\"news-highlight-red\">spotlight-designated paper 🎗 (top 3.5%)</span>."
+  },
+  {
+    "date": "Aug '23",
+    "sort_key": "2023-08-15",
+    "html": "Joined Arizona State University as a Masters student in Computer Science."
+  }
+]

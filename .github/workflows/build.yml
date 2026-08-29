@@ -1,0 +1,60 @@
+name: Build site
+
+# Regenerates the static HTML whenever a content source changes, then commits
+# the result. GitHub Pages serves the committed output directly.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'data/**'
+      - 'pages/**'
+      - 'images/**'
+      - 'build.py'
+      - 'verify.py'
+      - 'styles.css'
+      - 'main.js'
+      - '.github/workflows/build.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Don't re-trigger on the commit this workflow itself pushes.
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # build.py and verify.py use the standard library only, so there is
+      # nothing to install and no dependency that can break the build.
+
+      - name: Build
+        run: python3 build.py
+
+      - name: Verify
+        run: python3 verify.py
+
+      - name: Commit generated files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index.html papers 404.html llms.txt sitemap.xml robots.txt .nojekyll
+          if git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Rebuild site [skip ci]"
+            git push
+          fi

@@ -1,0 +1,73 @@
+{
+  "name": "Aditya Taparia",
+  "url": "https://aditya-taparia.github.io",
+  "title": "Aditya Taparia — CS PhD Student, Arizona State University | Concept-Driven AI, Explainability, Uncertainty in Foundation Models",
+  "description": "Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.",
+  "short_description": "CS PhD student at Arizona State University working on concept-driven AI, explainability, and uncertainty in foundation models.",
+  "email": "ataparia@asu.edu",
+  "profile_image": "images/profile_pic.jpg",
+  "profile_image_alt": "Aditya Taparia",
+  "favicon": "images/logo.png",
+  "theme_color": "#FAFAFA",
+  "affiliation": {
+    "name": "Arizona State University",
+    "url": "https://www.asu.edu/",
+    "department": "School of Computing and Augmented Intelligence"
+  },
+  "lab": {
+    "name": "Laboratory for Learning Evaluation and Naturalization of Systems (LENS Lab)",
+    "url": "https://ransml.github.io/lens-lab/"
+  },
+  "advisor": {
+    "name": "Ransalu Senanayake",
+    "url": "https://www.ransalu.com/"
+  },
+  "alumni_of": {
+    "name": "Indian Institute of Information Technology, Kottayam",
+    "url": "https://www.iiitkottayam.ac.in/"
+  },
+  "research_focus": [
+    "Concept-based explainability: how neural networks form and use high-level abstractions",
+    "Uncertainty quantification and decomposition in large language models",
+    "Failure diagnosis and red teaming of vision-language and text-to-image models",
+    "Vision-language conditioned sensor fusion for robust object detection",
+    "Test-time error detection and model adaptation under distribution shift",
+    "Agentic AI systems: learning to configure multi-agent pipelines",
+    "Interpretability and uncertainty-aware explanation of robot policies"
+  ],
+  "links": [
+    { "label": "Email",          "icon": "email",           "href": "mailto:ataparia@asu.edu",                                        "external": false },
+    { "label": "CV",             "icon": "picture_as_pdf",  "href": "data/CV.pdf",                                                    "external": false },
+    { "label": "Google Scholar", "icon": "school",          "href": "https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en",   "external": true  },
+    { "label": "LinkedIn",       "icon": "business",        "href": "https://www.linkedin.com/in/aditya-taparia/",                    "external": true  },
+    { "label": "GitHub",         "icon": "code",            "href": "https://github.com/aditya-taparia",                              "external": true  }
+  ],
+  "same_as": [
+    "https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en",
+    "https://github.com/aditya-taparia",
+    "https://www.linkedin.com/in/aditya-taparia/",
+    "https://arxiv.org/a/taparia_a_1"
+  ],
+  "goatcounter_code": "adityataparia",
+  "google_site_verification": "cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE",
+  "llm_user_agents": [
+    "GPTBot",
+    "OAI-SearchBot",
+    "ChatGPT-User",
+    "ClaudeBot",
+    "Claude-User",
+    "Claude-SearchBot",
+    "anthropic-ai",
+    "PerplexityBot",
+    "Perplexity-User",
+    "Google-Extended",
+    "Applebot-Extended",
+    "CCBot",
+    "cohere-ai",
+    "Meta-ExternalAgent",
+    "Bingbot",
+    "Amazonbot",
+    "DuckAssistBot",
+    "YouBot"
+  ]
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ExpressivityBench: Can LLMs Communicate Implicitly? — Aditya Taparia</title>
+<meta name="description" content="An information-theoretic benchmark for implicit communication in LLMs across nine tasks, showing models convey emotion and tone well but lag on sociolinguistic signals like age, gender, and political slant.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/expressivity-bench/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="ExpressivityBench: Can LLMs Communicate Implicitly? — Aditya Taparia">
+<meta property="og:description" content="An information-theoretic benchmark for implicit communication in LLMs across nine tasks, showing models convey emotion and tone well but lag on sociolinguistic signals like age, gender, and political slant.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/expressivity-bench/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/Neurips_Behaviour.png">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ExpressivityBench: Can LLMs Communicate Implicitly? — Aditya Taparia">
+<meta name="twitter:description" content="An information-theoretic benchmark for implicit communication in LLMs across nine tasks, showing models convey emotion and tone well but lag on sociolinguistic signals like age, gender, and political slant.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/Neurips_Behaviour.png">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="ExpressivityBench: Can LLMs Communicate Implicitly?">
+<meta name="citation_author" content="Joshua Tint">
+<meta name="citation_author" content="Som Sagar">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Kelly Raines">
+<meta name="citation_author" content="Bimsara Pathiraja">
+<meta name="citation_author" content="Caleb Liu">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_conference_title" content="Findings of the Association for Computational Linguistics: EACL">
+<meta name="citation_arxiv_id" content="2411.08010">
+<meta name="citation_pdf_url" content="https://aclanthology.org/2026.findings-eacl.235.pdf">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/expressivity-bench/#article",
+  "name": "ExpressivityBench: Can LLMs Communicate Implicitly?",
+  "headline": "ExpressivityBench: Can LLMs Communicate Implicitly?",
+  "url": "https://aditya-taparia.github.io/papers/expressivity-bench/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/expressivity-bench/",
+  "datePublished": "2026",
+  "inLanguage": "en",
+  "abstract": "ExpressivityBench measures how well large language models convey information implicitly, modelling generation as an information-theoretic channel between a generator and a grader across nine tasks spanning emotion, tone, age, gender, and political slant. We find model strengths are uneven and strongly task-dependent, with affective content handled far better than sociolinguistic signals.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Joshua Tint"
+    },
+    {
+      "@type": "Person",
+      "name": "Som Sagar"
+    },
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Kelly Raines"
+    },
+    {
+      "@type": "Person",
+      "name": "Bimsara Pathiraja"
+    },
+    {
+      "@type": "Person",
+      "name": "Caleb Liu"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Findings of the Association for Computational Linguistics: EACL"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "Findings of the Association for Computational Linguistics: EACL"
+  },
+  "image": "https://aditya-taparia.github.io/images/Neurips_Behaviour.png",
+  "identifier": "arXiv:2411.08010"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "ExpressivityBench: Can LLMs Communicate Implicitly?",
+      "item": "https://aditya-taparia.github.io/papers/expressivity-bench/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>Findings of EACL 2026</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">ExpressivityBench: Can LLMs Communicate Implicitly?</h1>
+      <p class="paper-authors">Joshua Tint, Som Sagar, <strong>Aditya Taparia</strong>, Kelly Raines, Bimsara Pathiraja, Caleb Liu, Ransalu Senanayake</p>
+      <p class="paper-meta">Findings of the Association for Computational Linguistics: EACL, 2026</p>
+      
+      <div class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.235.pdf" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="https://arxiv.org/abs/2411.08010" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">description</span> arXiv</a></div>
+    </header>
+
+    <figure class="paper-figure"><img src="../../images/Neurips_Behaviour.png" alt="Overview figure for ExpressivityBench, showing the generator-to-grader channel used to measure how much implicit signal a language model transmits." loading="lazy" decoding="async"></figure>
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>ExpressivityBench measures how well large language models convey information implicitly, modelling generation as an information-theoretic channel between a generator and a grader across nine tasks spanning emotion, tone, age, gender, and political slant. We find model strengths are uneven and strongly task-dependent, with affective content handled far better than sociolinguistic signals.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-expressivity-bench">@inproceedings{tint2026expressivitybench,
+    title={ExpressivityBench: Can LLMs Communicate Implicitly?},
+    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Raines, Kelly and Pathiraja, Bimsara and Liu, Caleb and Senanayake, Ransalu},
+    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},
+    pages={4500--4515},
+    year={2026}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-expressivity-bench" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../anatomy-of-uncertainty/">&larr; ICLR Workshop 2026</a> &middot; <a href="../">All publications</a> &middot; <a href="../learning-to-configure/">arXiv 2026 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

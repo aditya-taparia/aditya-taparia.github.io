@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BaTCAVe: Trustworthy Explanations for Robot Behaviors — Aditya Taparia</title>
+<meta name="description" content="A Bayesian concept-based explainability method that reports calibrated uncertainty alongside each explanation of a robot&#x27;s decision, validated in simulation and on real robots.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/batcave/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="BaTCAVe: Trustworthy Explanations for Robot Behaviors — Aditya Taparia">
+<meta property="og:description" content="A Bayesian concept-based explainability method that reports calibrated uncertainty alongside each explanation of a robot&#x27;s decision, validated in simulation and on real robots.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/batcave/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/Neurips_SATA.png">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BaTCAVe: Trustworthy Explanations for Robot Behaviors — Aditya Taparia">
+<meta name="twitter:description" content="A Bayesian concept-based explainability method that reports calibrated uncertainty alongside each explanation of a robot&#x27;s decision, validated in simulation and on real robots.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/Neurips_SATA.png">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="BaTCAVe: Trustworthy Explanations for Robot Behaviors">
+<meta name="citation_author" content="Som Sagar">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Harsh Mankodiya">
+<meta name="citation_author" content="Pranav Bidare">
+<meta name="citation_author" content="Yifan Zhou">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)">
+<meta name="citation_arxiv_id" content="2409.10733">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2409.10733">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/batcave/#article",
+  "name": "BaTCAVe: Trustworthy Explanations for Robot Behaviors",
+  "headline": "BaTCAVe: Trustworthy Explanations for Robot Behaviors",
+  "url": "https://aditya-taparia.github.io/papers/batcave/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/batcave/",
+  "datePublished": "2025",
+  "inLanguage": "en",
+  "abstract": "We introduce BaTCAVe, a Bayesian extension of concept activation vectors that attaches calibrated uncertainty estimates to concept-based explanations of robot decisions, making post-hoc interpretation of neural network policies trustworthy across both simulation platforms and real-world robotic systems.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Som Sagar"
+    },
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Harsh Mankodiya"
+    },
+    {
+      "@type": "Person",
+      "name": "Pranav Bidare"
+    },
+    {
+      "@type": "Person",
+      "name": "Yifan Zhou"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)"
+  },
+  "image": "https://aditya-taparia.github.io/images/Neurips_SATA.png",
+  "identifier": "arXiv:2409.10733"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "BaTCAVe: Trustworthy Explanations for Robot Behaviors",
+      "item": "https://aditya-taparia.github.io/papers/batcave/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-content">
+    <button type="button" class="close-btn" aria-label="Close video">&times;</button>
+    <video id="modalVideo" controls preload="none">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>IROS 2025</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">BaTCAVe: Trustworthy Explanations for Robot Behaviors</h1>
+      <p class="paper-authors">Som Sagar, <strong>Aditya Taparia</strong>, Harsh Mankodiya, Pranav Bidare, Yifan Zhou, Ransalu Senanayake</p>
+      <p class="paper-meta">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025</p>
+      <p class="paper-meta">* Equal contribution by Som Sagar and Aditya Taparia.</p>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2409.10733" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="#" class="btn btn-publication" data-video="../../videos/BaTCAVe Video.mp4"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/aditya-taparia/BaTCAVe" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a></div>
+    </header>
+
+    <figure class="paper-figure"><img src="../../images/Neurips_SATA.png" alt="Overview figure for BaTCAVe, showing Bayesian concept activation vectors producing explanations of robot decisions with uncertainty estimates." loading="lazy" decoding="async"></figure>
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>We introduce BaTCAVe, a Bayesian extension of concept activation vectors that attaches calibrated uncertainty estimates to concept-based explanations of robot decisions, making post-hoc interpretation of neural network policies trustworthy across both simulation platforms and real-world robotic systems.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-batcave">@inproceedings{sagar2025batcave,
+    title={BaTCAVe: Trustworthy Explanations for Robot Behaviors},
+    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},
+    booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    pages={13867--13874},
+    year={2025}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-batcave" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../abductive-reasoning/">&larr; AAAI 2026</a> &middot; <a href="../">All publications</a> &middot; <a href="../rlpo/">ICML 2025 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

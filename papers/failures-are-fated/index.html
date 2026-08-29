@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models — Aditya Taparia</title>
+<meta name="description" content="A deep RL method that systematically explores where large vision-language models fail, then uses limited human feedback to reshape that failure landscape and mitigate bias and misalignment.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/failures-are-fated/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models — Aditya Taparia">
+<meta property="og:description" content="A deep RL method that systematically explores where large vision-language models fail, then uses limited human feedback to reshape that failure landscape and mitigate bias and misalignment.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/failures-are-fated/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/ICML_1.png">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models — Aditya Taparia">
+<meta name="twitter:description" content="A deep RL method that systematically explores where large vision-language models fail, then uses limited human feedback to reshape that failure landscape and mitigate bias and misalignment.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/ICML_1.png">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models">
+<meta name="citation_author" content="Som Sagar">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_publication_date" content="2024">
+<meta name="citation_conference_title" content="International Conference on Machine Learning (ICML)">
+<meta name="citation_arxiv_id" content="2406.07145">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2406.07145">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/failures-are-fated/#article",
+  "name": "Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models",
+  "headline": "Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models",
+  "url": "https://aditya-taparia.github.io/papers/failures-are-fated/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/failures-are-fated/",
+  "datePublished": "2024",
+  "inLanguage": "en",
+  "abstract": "We introduce a deep reinforcement learning framework that maps the failure landscape of large vision and language models, then restructures that landscape with limited human feedback to mitigate accuracy failures, social biases, and misalignment.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Som Sagar"
+    },
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "International Conference on Machine Learning (ICML)"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "International Conference on Machine Learning (ICML)"
+  },
+  "image": "https://aditya-taparia.github.io/images/ICML_1.png",
+  "identifier": "arXiv:2406.07145",
+  "award": "Spotlight (top 3.5%)"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models",
+      "item": "https://aditya-taparia.github.io/papers/failures-are-fated/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-content">
+    <button type="button" class="close-btn" aria-label="Close video">&times;</button>
+    <video id="modalVideo" controls preload="none">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>ICML 2024</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models</h1>
+      <p class="paper-authors">Som Sagar, <strong>Aditya Taparia</strong>, Ransalu Senanayake</p>
+      <p class="paper-meta">International Conference on Machine Learning (ICML), 2024 &middot; <span class="pub-award">Spotlight (top 3.5%) 🎗</span></p>
+      
+      <div class="pub-links"><a href="https://arxiv.org/abs/2406.07145" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="#" class="btn btn-publication" data-video="../../videos/Failure Video.mp4"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/somsagar07/FailureShiftRL" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a></div>
+    </header>
+
+    <figure class="paper-figure"><img src="../../images/ICML_1.png" alt="Overview figure for Failures Are Fated, showing a deep reinforcement learning agent exploring and reshaping the failure landscape of a large vision and language model." loading="lazy" decoding="async"></figure>
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>We introduce a deep reinforcement learning framework that maps the failure landscape of large vision and language models, then restructures that landscape with limited human feedback to mitigate accuracy failures, social biases, and misalignment.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-failures-are-fated">@inproceedings{sagar2024failures,
+    title={Failures are fated, but can be faded: characterizing and mitigating unwanted behaviors in large-scale vision and language models},
+    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},
+    booktitle={Proceedings of the 41st International Conference on Machine Learning},
+    pages={42999--43023},
+    year={2024}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-failures-are-fated" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../hpix/">&larr; Alexandria Eng. J. 2024</a> &middot; <a href="../">All publications</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

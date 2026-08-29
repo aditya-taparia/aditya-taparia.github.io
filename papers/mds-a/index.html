@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation — Aditya Taparia</title>
+<meta name="description" content="An aerial imagery dataset with explicitly controlled distribution shifts, designed for benchmarking test-time error detection and model adaptation.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/mds-a/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation — Aditya Taparia">
+<meta property="og:description" content="An aerial imagery dataset with explicitly controlled distribution shifts, designed for benchmarking test-time error detection and model adaptation.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/mds-a/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/mdsa.png">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation — Aditya Taparia">
+<meta name="twitter:description" content="An aerial imagery dataset with explicitly controlled distribution shifts, designed for benchmarking test-time error detection and model adaptation.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/mdsa.png">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation">
+<meta name="citation_author" content="Noel Ngu">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Gerardo I. Simari">
+<meta name="citation_author" content="Mario A. Leiva">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_author" content="Paulo Shakarian">
+<meta name="citation_author" content="Nathaniel D. Bastian">
+<meta name="citation_author" content="John Corcoran">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_conference_title" content="Proceedings of the AAAI Symposium Series">
+<meta name="citation_arxiv_id" content="2502.13289">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2502.13289">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/mds-a/#article",
+  "name": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
+  "headline": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
+  "url": "https://aditya-taparia.github.io/papers/mds-a/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/mds-a/",
+  "datePublished": "2025",
+  "inLanguage": "en",
+  "abstract": "We present MDS-A, a dataset of simulated aerial imagery paired with explicitly controlled distribution shifts, built for evaluating test-time error detection and model adaptation methods under conditions where a single held-out test set would not expose failure.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Noel Ngu"
+    },
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Gerardo I. Simari"
+    },
+    {
+      "@type": "Person",
+      "name": "Mario A. Leiva"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    },
+    {
+      "@type": "Person",
+      "name": "Paulo Shakarian"
+    },
+    {
+      "@type": "Person",
+      "name": "Nathaniel D. Bastian"
+    },
+    {
+      "@type": "Person",
+      "name": "John Corcoran"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "Proceedings of the AAAI Symposium Series"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "Proceedings of the AAAI Symposium Series"
+  },
+  "image": "https://aditya-taparia.github.io/images/mdsa.png",
+  "identifier": "arXiv:2502.13289"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
+      "item": "https://aditya-taparia.github.io/papers/mds-a/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>AAAI Symposium 2025</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation</h1>
+      <p class="paper-authors">Noel Ngu, <strong>Aditya Taparia</strong>, Gerardo I. Simari, Mario A. Leiva, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran</p>
+      <p class="paper-meta">Proceedings of the AAAI Symposium Series, 2025</p>
+      
+      <div class="pub-links"><a href="https://arxiv.org/abs/2502.13289" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a></div>
+    </header>
+
+    <figure class="paper-figure"><img src="../../images/mdsa.png" alt="Sample imagery from the MDS-A dataset, showing aerial scenes rendered under multiple simulated distribution shifts." loading="lazy" decoding="async"></figure>
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>We present MDS-A, a dataset of simulated aerial imagery paired with explicitly controlled distribution shifts, built for evaluating test-time error detection and model adaptation methods under conditions where a single held-out test set would not expose failure.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-mds-a">@inproceedings{ngu2025multiple,
+    title={Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation},
+    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I. and Leiva, Mario A. and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John},
+    booktitle={Proceedings of the AAAI Symposium Series},
+    volume={5},
+    pages={379--383},
+    year={2025}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-mds-a" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../rlpo/">&larr; ICML 2025</a> &middot; <a href="../">All publications</a> &middot; <a href="../red-teaming-diffusion/">NeurIPS Workshop 2024 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

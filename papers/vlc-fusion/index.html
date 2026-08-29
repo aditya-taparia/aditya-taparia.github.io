@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection — Aditya Taparia</title>
+<meta name="description" content="A sensor fusion framework that uses a vision-language model to read environmental context and adaptively reweight modalities, making object detection robust to lighting, weather, and occlusion shifts.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/vlc-fusion/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection — Aditya Taparia">
+<meta property="og:description" content="A sensor fusion framework that uses a vision-language model to read environmental context and adaptively reweight modalities, making object detection robust to lighting, weather, and occlusion shifts.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/vlc-fusion/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/vlc_fusion.png">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection — Aditya Taparia">
+<meta name="twitter:description" content="A sensor fusion framework that uses a vision-language model to read environmental context and adaptively reweight modalities, making object detection robust to lighting, weather, and occlusion shifts.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/vlc_fusion.png">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Noel Ngu">
+<meta name="citation_author" content="Mario Leiva">
+<meta name="citation_author" content="Joshua Shay Kricheli">
+<meta name="citation_author" content="John Corcoran">
+<meta name="citation_author" content="Nathaniel D. Bastian">
+<meta name="citation_author" content="Gerardo Simari">
+<meta name="citation_author" content="Paulo Shakarian">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_conference_title" content="European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)">
+<meta name="citation_arxiv_id" content="2505.12715">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2505.12715">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/vlc-fusion/#article",
+  "name": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
+  "headline": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
+  "url": "https://aditya-taparia.github.io/papers/vlc-fusion/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/vlc-fusion/",
+  "datePublished": "2026",
+  "inLanguage": "en",
+  "abstract": "We introduce VLC Fusion, a vision-language conditioned sensor fusion framework that uses a vision-language model to infer environmental cues — lighting, weather, occlusion — and adaptively reweight sensor modalities, improving object detection robustness under conditions where fixed fusion strategies degrade.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Noel Ngu"
+    },
+    {
+      "@type": "Person",
+      "name": "Mario Leiva"
+    },
+    {
+      "@type": "Person",
+      "name": "Joshua Shay Kricheli"
+    },
+    {
+      "@type": "Person",
+      "name": "John Corcoran"
+    },
+    {
+      "@type": "Person",
+      "name": "Nathaniel D. Bastian"
+    },
+    {
+      "@type": "Person",
+      "name": "Gerardo Simari"
+    },
+    {
+      "@type": "Person",
+      "name": "Paulo Shakarian"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)"
+  },
+  "image": "https://aditya-taparia.github.io/images/vlc_fusion.png",
+  "identifier": "arXiv:2505.12715",
+  "award": "Shortlisted for Best Research Track Student Paper Award"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
+      "item": "https://aditya-taparia.github.io/papers/vlc-fusion/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>ECML PKDD 2026</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</h1>
+      <p class="paper-authors"><strong>Aditya Taparia</strong>, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake</p>
+      <p class="paper-meta">European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD), 2026 &middot; <span class="pub-award">Shortlisted for Best Research Track Student Paper Award 🎗</span></p>
+      
+      <div class="pub-links"><a href="https://arxiv.org/abs/2505.12715" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a></div>
+    </header>
+
+    <figure class="paper-figure"><img src="../../images/vlc_fusion_full.jpg" alt="VLC Fusion architecture: LiDAR and camera features are combined with vision-language model conditions through a CBAM, BatchNorm and FiLM block, raising detections from 6/20 to 12/20 objects compared with standard multi-modal fusion." loading="lazy" decoding="async"></figure>
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>We introduce VLC Fusion, a vision-language conditioned sensor fusion framework that uses a vision-language model to infer environmental cues — lighting, weather, occlusion — and adaptively reweight sensor modalities, improving object detection robustness under conditions where fixed fusion strategies degrade.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-vlc-fusion">@inproceedings{taparia2026vlc,
+    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},
+    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},
+    booktitle={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+    year={2026}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-vlc-fusion" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../">All publications</a> &middot; <a href="../anatomy-of-uncertainty/">ICLR Workshop 2026 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>

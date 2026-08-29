@@ -1,668 +1,437 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-    <style type="text/css">
-
-      body {
-       background-color: #FAFAFA; 
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditya Taparia — CS PhD Student, Arizona State University | Concept-Driven AI, Explainability, Uncertainty in Foundation Models</title>
+<meta name="description" content="Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/">
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="Aditya Taparia — CS PhD Student, Arizona State University | Concept-Driven AI, Explainability, Uncertainty in Foundation Models">
+<meta property="og:description" content="Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.">
+<meta property="og:url" content="https://aditya-taparia.github.io/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Aditya Taparia — CS PhD Student, Arizona State University | Concept-Driven AI, Explainability, Uncertainty in Foundation Models">
+<meta name="twitter:description" content="Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://aditya-taparia.github.io/#website",
+      "url": "https://aditya-taparia.github.io/",
+      "name": "Aditya Taparia",
+      "description": "Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://aditya-taparia.github.io/#person"
       }
-
-      .btn {
-        display: inline-flex; 
-        align-items: center;
-        gap: 4px;
-        margin: 1px;
-        /* clockwise: top | right | bottom | left */
-        padding: 4px 10px 4px 8px;
-        text-decoration: none;
-        color: #303030;
-        background-color: #BBDEFB;
-        border-radius: 20px;
-        font-weight: 500;
-        transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -webkit-transition: background-color 0.2s;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        vertical-align: middle;
-        cursor: pointer;
-      }
-      .btn .material-icons {
-        font-size: 1.2em;
-        text-decoration: none;
-      }
-      .btn:hover {
-        background-color: #316CAD;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -webkit-transition: background-color 0.2s;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-      }
-
-      /* Make button don't show underline after clicking */
-      .btn:focus,
-      .btn:active {
-        color: #303030;
-        text-decoration: none;
-      }
-
-      .btn:focus:hover, .btn:active:hover {
-        background-color: #316CAD;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -webkit-transition: background-color 0.2s;
-      }
-
-      .btn-publication {
-        background-color: #C8E6C9;
-        color: #303030;
-      }
-
-      .btn-publication:hover {
-        background-color: #2E7D32;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -webkit-transition: background-color 0.2s;
-      }
-
-      .btn-publication:focus,
-      .btn-publication:active {
-        color: #303030;
-        text-decoration: none;
-      }
-
-      .btn-publication:focus:hover, .btn-publication:active:hover {
-        background-color: #2E7D32;
-        color: #fff;
-        text-decoration: none;
-        transition: background-color 0.2s;
-        -moz-transition: background-color 0.2s;
-        -webkit-transition: background-color 0.2s;
-      }
-
-      .news-item-title {
-        font-weight: 600;
-        /* color: #316CAD; */
-      }
-
-      .news-date {
-        font-weight: 500;
-        color: #316CAD;
-      }
-
-      .news-highlight-red {
-        font-weight: 600;
-        color: #EF5350;
-      }
-
-
-      .highlight-publication {
-        background-color: #E8F6E9;
-      }
-
-      .description {
-        display: block;
-        margin: 4px 0;       
-        color: #555;
-        font-style: italic;
-        padding: 4px 0;
-      }
-
-      .bibtex {
-        max-height: 0;             
-        opacity: 0;
-        overflow-x: auto;
-        margin-top: 0;
-        padding: 0 4px;     
-        background-color: #fff3e0;
-        border-left: 4px solid #ffb300;
-        font-family: monospace;
-        white-space: pre-wrap;
-        font-size: small;
-        transition: max-height 0.5s ease, opacity 0.5s ease;
-
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-      }
-
-      .bibtex.show {
-        max-height: 200px;        
-        opacity: 1;
-        margin-top: 4px;
-        padding: 4px;            
-      }
-
-    a {
-      color: #1E88E5;
-      text-decoration: none;
+    },
+    {
+      "@type": "Person",
+      "@id": "https://aditya-taparia.github.io/#person",
+      "name": "Aditya Taparia",
+      "url": "https://aditya-taparia.github.io/",
+      "email": "mailto:ataparia@asu.edu",
+      "image": "https://aditya-taparia.github.io/images/profile_pic.jpg",
+      "jobTitle": "PhD Student in Computer Science",
+      "description": "Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.",
+      "knowsAbout": [
+        "Concept-based explainability: how neural networks form and use high-level abstractions",
+        "Uncertainty quantification and decomposition in large language models",
+        "Failure diagnosis and red teaming of vision-language and text-to-image models",
+        "Vision-language conditioned sensor fusion for robust object detection",
+        "Test-time error detection and model adaptation under distribution shift",
+        "Agentic AI systems: learning to configure multi-agent pipelines",
+        "Interpretability and uncertainty-aware explanation of robot policies"
+      ],
+      "affiliation": {
+        "@type": "CollegeOrUniversity",
+        "name": "Arizona State University",
+        "url": "https://www.asu.edu/",
+        "department": {
+          "@type": "Organization",
+          "name": "School of Computing and Augmented Intelligence"
+        }
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Indian Institute of Information Technology, Kottayam",
+        "url": "https://www.iiitkottayam.ac.in/"
+      },
+      "sameAs": [
+        "https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en",
+        "https://github.com/aditya-taparia",
+        "https://www.linkedin.com/in/aditya-taparia/",
+        "https://arxiv.org/a/taparia_a_1"
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://aditya-taparia.github.io/#publications",
+      "name": "Publications by Aditya Taparia",
+      "numberOfItems": 11,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://aditya-taparia.github.io/papers/vlc-fusion/",
+          "name": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://aditya-taparia.github.io/papers/anatomy-of-uncertainty/",
+          "name": "The Anatomy of Uncertainty in LLMs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://aditya-taparia.github.io/papers/expressivity-bench/",
+          "name": "ExpressivityBench: Can LLMs Communicate Implicitly?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://aditya-taparia.github.io/papers/learning-to-configure/",
+          "name": "Learning to Configure Agentic AI Systems"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://aditya-taparia.github.io/papers/abductive-reasoning/",
+          "name": "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://aditya-taparia.github.io/papers/batcave/",
+          "name": "BaTCAVe: Trustworthy Explanations for Robot Behaviors"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://aditya-taparia.github.io/papers/rlpo/",
+          "name": "Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://aditya-taparia.github.io/papers/mds-a/",
+          "name": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://aditya-taparia.github.io/papers/red-teaming-diffusion/",
+          "name": "LLM-Assisted Red Teaming of Diffusion Models through \"Failures Are Fated, But Can Be Faded\""
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://aditya-taparia.github.io/papers/hpix/",
+          "name": "Transforming satellite imagery into vector maps using modified GANs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://aditya-taparia.github.io/papers/failures-are-fated/",
+          "name": "Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models"
+        }
+      ]
     }
-
-    a:focus,
-    a:hover {
-      color: #316CAD;
-      text-decoration: underline;
-    }
-
-    p, 
-    td, span {
-      text-align: justify;
-    }
-
-    body,
-    td,
-    th,
-    tr,
-    p,
-    a {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
-    }
-
-    strong {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-    }
-
-    heading {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
-    }
-
-    papertitle {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      color: #316CAD;
-    }
-
-    name {
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
-    }
-
-    .one {
-      width: 160px;
-      height: 160px;
-      position: relative;
-    }
-
-    .two {
-      width: 160px;
-      height: 160px;
-      position: absolute;
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .fade {
-      transition: opacity .2s ease-in-out;
-      -moz-transition: opacity .2s ease-in-out;
-      -webkit-transition: opacity .2s ease-in-out;
-    }
-
-    .publications-table tr td img {
-      max-width: 150px;
-      max-height: 125px;
-    } 
-
-    table tr td img {
-      vertical-align: middle;
-      border-radius: 8%;
-      transition: border-radius 0.2s ease-in-out;
-      -moz-transition: border-radius 0.2s ease-in-out;
-      -webkit-transition: border-radius 0.2s ease-in-out;
-    }
-    table tr td img:hover {
-      border-radius: 12%;
-      vertical-align: middle;
-      transition: border-radius 0.2s ease-in-out;
-      -moz-transition: border-radius 0.2s ease-in-out;
-      -webkit-transition: border-radius 0.2s ease-in-out;
-    }
-
-    /* Add space between publications */
-    .publications-table {
-      margin-top: 20px;
-      border-collapse: separate;
-      border-spacing: 0 10px; /* Reduced vertical spacing */
-    }
-
-    .modal {
-      display: none;                  /* hidden by default */
-      position: fixed;
-      z-index: 1000;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);    /* dark overlay */
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .modal-content {
-      position: relative;
-      background: #000;
-      padding: 0;
-      border-radius: 8px;
-      max-width: 50vw;      /* shrink the width */
-      max-height: 50vh;     /* constrain height */
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      animation: dropIn 0.3s ease-out;
-      overflow: hidden;     /* clip any overflow */
-    }
-    
-    /* 2) Make the video fill the modal nicely */
-    .modal-content video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    /* 3) Style the close button as a rounded square */
-    .close-btn {
-      position: absolute;
-      top: 12px;
-      right: 12px;
-      width: 32px;
-      height: 32px;
-      line-height: 32px;          /* center the “×” vertically */
-      text-align: center;         /* center horizontally */
-      font-size: 20px;
-      color: #fff;
-      background-color: rgba(0,0,0,0.8);
-      border-radius: 6px;         /* rounded corners */
-      cursor: pointer;
-      z-index: 10;
-      transition: background-color 0.2s;
-    }
-    .close-btn:hover {
-      background-color: rgba(0,0,0,1);
-    }
-    
-    /* Simple "drop from top" animation */
-    @keyframes dropIn {
-      from { transform: translateY(-30px); opacity: 0; }
-      to   { transform: translateY(0);    opacity: 1; }
-    }
-
-    /* Tab Navigation Styles */
-    .tab-navigation {
-      display: flex;
-      margin: 20px 0 10px 0;
-      border-bottom: 2px solid #e0e0e0;
-      position: relative;
-    }
-
-    .tab-button {
-      background: none;
-      border: none;
-      padding: 12px 24px;
-      font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 500;
-      color: #666;
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: color 0.3s ease;
-      margin-right: 20px;
-      position: relative;
-    }
-
-    .tab-button:hover {
-      color: #316CAD;
-    }
-
-    .tab-button.active {
-      color: #316CAD;
-      font-weight: 600;
-    }
-
-    /* Animated underline */
-    .tab-button::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 3px;
-      background-color: #316CAD;
-      transition: width 0.3s ease;
-    }
-
-    .tab-button.active::after {
-      width: 100%;
-    }
-
-    .tab-content {
-      display: none;
-      min-height: 200px; /* Prevent layout shift */
-      width: 100%;
-      box-sizing: border-box;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    /* Ensure tables have consistent width */
-    .tab-content table {
-      width: 100% !important;
-      table-layout: fixed;
-    }
-
-    /* Control publication table cell spacing */
-    .publications-table td:first-child {
-      width: 18% !important;
-      padding-right: 8px;
-      vertical-align: top;
-    }
-
-    .publications-table td:last-child {
-      width: 82% !important;
-    }
-
-    /* Ensure images don't overflow their containers */
-    .publications-table td:first-child img {
-      max-width: 100%;
-      height: auto;
-    }
-  </style>
-   
-  <link rel="icon" type="image/jpg" href="images/logo.png">
-    <title>Aditya Taparia</title>
-   
-  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-   
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'    
-    type='text/css'>
+  ]
+}
+</script>
 </head>
-
 <body>
-  <div id="videoModal" class="modal">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <video id="modalVideo" controls>
-        <source src="" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <br/>
-    <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-        <tr>
-            <td>
-                <div id="intro-content"></div> <br/> 
-                <div id="news-content"></div> <br/> <br/>
-                <div id="publications-content"></div>
-            </td>
-        </tr>
-      </table>
-    
-    <table width="100%" cellspacing="0" cellpadding="10" border="0" align="center">
+<div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-content">
+    <button type="button" class="close-btn" aria-label="Close video">&times;</button>
+    <video id="modalVideo" controls preload="none">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<main id="main" class="page">
+
+  <section class="intro-grid">
+    <div class="intro-text">
+      <div class="name-block"><h1 class="h-name">Aditya Taparia</h1></div>
+<!--
+  Bio prose only. build.py wraps this in the page layout and adds the
+  profile photo and the link buttons from data/site.json.
+-->
+<p>Hi! I'm Aditya Taparia, a second-year Computer Science PhD student at Arizona State University, advised by Prof. <a href="https://www.ransalu.com/" target="_blank" rel="noopener">Ransalu Senanayake</a>
+    and affiliated with the <a href="https://ransml.github.io/lens-lab/" target="_blank" rel="noopener">Laboratory for Learning Evaluation and Naturalization of Systems (LENS Lab)</a>.
+
+    My research is centered on the conceptual foundations of neural networks&mdash;exploring how models form, refine, and leverage
+    high-level abstractions or &ldquo;concepts&rdquo; to learn effectively and make informed decisions. I aim to develop concept-driven AI systems
+    that are more robust, adaptable, and capable of handling distribution shifts in evolving real-world environments. By grounding
+    learning and decision-making in explicit concepts, I seek to improve model interpretability, generalization, and optimize
+    AI-driven decision processes.</p>
+
+<p>Most recently I was a Research Intern at <a href="https://www.bosch.com/research/" target="_blank" rel="noopener">Bosch</a> (2026), and before that a Student Research Intern
+    in the MIG group at <a href="https://www.llnl.gov/" target="_blank" rel="noopener">Lawrence Livermore National Laboratory</a> (2025), where I worked on
+    uncertainty quantification for large language models.</p>
+
+<p>Previously, I completed my Bachelors with Honors in Computer Science from the Indian Institute of Information Technology (IIIT), Kottayam.</p>
+
+<p>I'm always happy to connect about research, collaborate on ideas, or share advice. Please feel free to get in touch!</p>
+
+      <div class="link-row">
+        <a href="mailto:ataparia@asu.edu" class="btn"><span class="material-icons">email</span> Email</a>
+        <a href="data/CV.pdf" class="btn"><span class="material-icons">picture_as_pdf</span> CV</a>
+        <a href="https://scholar.google.com/citations?user=hfU1wQwAAAAJ&amp;hl=en" class="btn" target="_blank" rel="noopener"><span class="material-icons">school</span> Google Scholar</a>
+        <a href="https://www.linkedin.com/in/aditya-taparia/" class="btn" target="_blank" rel="noopener"><span class="material-icons">business</span> LinkedIn</a>
+        <a href="https://github.com/aditya-taparia" class="btn" target="_blank" rel="noopener"><span class="material-icons">code</span> GitHub</a>
+      </div>
+    </div>
+    <div class="intro-photo">
+      <img src="images/profile_pic.jpg" alt="Aditya Taparia"
+           width="240" height="240" decoding="async">
+    </div>
+  </section>
+
+  <section aria-labelledby="news-heading">
+    <h2 class="h-section" id="news-heading">News</h2>
+    <div class="news-box">
+      <table class="news-table">
         <tbody>
-            <tr>
-                <td>
-                    <br>
-                    <br>
-                    <!-- <p align="center">
-                        <font size="2">
-                            Website template from <a href="https://github.com/jonbarron/jonbarron_website">here.</a>
-                          </font>
-                      </p> -->
-                  </td>
-              </tr>
-          </tbody>
-        </table>
+          <tr><td class="news-date-cell"><span class="news-date">May &#x27;26</span></td><td>Our paper "<a class="news-item-title" href="https://arxiv.org/abs/2505.12715" target="_blank" rel="noopener">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</a>" was accepted to ECML PKDD'26 and <span class="news-highlight-red">shortlisted for the Best Research Track Student Paper Award 🎗</span>.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">May &#x27;26</span></td><td>Joined <img src="images/logos/bosch.png" alt="" class="news-logo"> <a class="news-item-title" href="https://www.bosch.com/research/" target="_blank" rel="noopener">Bosch</a> as a Research Intern.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Jan &#x27;26</span></td><td>Our paper "<a class="news-item-title" href="https://aclanthology.org/2026.findings-eacl.235.pdf" target="_blank" rel="noopener">ExpressivityBench: Can LLMs Communicate Implicitly?</a>" was accepted to Findings of EACL'26.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Nov &#x27;25</span></td><td>Our paper "<a class="news-item-title" href="https://arxiv.org/abs/2505.19361" target="_blank" rel="noopener">Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments</a>" was accepted to AAAI'26.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Jun &#x27;25</span></td><td>Our paper "<a class="news-item-title" href="https://arxiv.org/abs/2409.10733" target="_blank" rel="noopener">BaTCAVe: Trustworthy Explanations for Robot Behaviors</a>" was accepted to IROS'25.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">May &#x27;25</span></td><td>Joined <img src="images/logos/llnl.png" alt="" class="news-logo"> <a class="news-item-title" href="https://www.llnl.gov/" target="_blank" rel="noopener">Lawrence Livermore National Laboratory</a> as a Student Research Intern in the MIG group.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">May &#x27;25</span></td><td>Our paper "<a class="news-item-title" href="https://arxiv.org/abs/2408.13438" target="_blank" rel="noopener">Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations</a>" was accepted to ICML'25.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Jan &#x27;25</span></td><td>Joined Arizona State University as a PhD student in Computer Science.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Dec &#x27;24</span></td><td>Presented four workshop papers at NeurIPS'24.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">May &#x27;24</span></td><td>Our paper "<a class="news-item-title" href="https://arxiv.org/abs/2406.07145" target="_blank" rel="noopener">Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models</a>" was accepted to ICML'24 as a <span class="news-highlight-red">spotlight-designated paper 🎗 (top 3.5%)</span>.</td></tr>
+          <tr><td class="news-date-cell"><span class="news-date">Aug &#x27;23</span></td><td>Joined Arizona State University as a Masters student in Computer Science.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-   
-  <script>
-    function createPublicationRow(paper, index) {
-      const bibId = 'bib' + index;
-        
-        // Create table row
-        const row = document.createElement('tr');
-        
-        // Create image cell
-        const imageCell = document.createElement('td');
-        imageCell.setAttribute('width', '18%');
-        imageCell.style.width = '18%';
-        imageCell.style.paddingRight = '8px';
-        imageCell.style.verticalAlign = 'top';
-        const img = document.createElement('img');
-        img.src = paper.image;
-        img.width = 150;
-        img.style.maxWidth = '100%';
-        img.style.height = 'auto';
-        imageCell.appendChild(img);
-        
-        // Create content cell
-        const contentCell = document.createElement('td');
-        contentCell.setAttribute('width', '82%');
-        contentCell.setAttribute('valign', 'top');
-        contentCell.style.width = '82%';
-        
-        // Create paper title
-        const title = document.createElement('papertitle');
-        title.textContent = paper.title;
-        contentCell.appendChild(title);
-        contentCell.appendChild(document.createElement('br'));
-        
-        // Create authors with bold name
-        const authorsText = paper.authors.replace('Aditya Taparia', '<strong>Aditya Taparia</strong>');
-        const authorsSpan = document.createElement('span');
-        authorsSpan.innerHTML = authorsText;
-        contentCell.appendChild(authorsSpan);
-        contentCell.appendChild(document.createElement('br'));
-        
-        // Create venue
-        const venueElement = document.createElement('em');
-        venueElement.textContent = paper.venue + ', ' + paper.year;
-        contentCell.appendChild(venueElement);
-        contentCell.appendChild(document.createElement('br'));
-        
-        // Create description
-        const description = document.createElement('div');
-        description.className = 'description';
-        description.textContent = paper.description;
-        contentCell.appendChild(description);
-        
-        // Create buttons
-        if (paper.links.pdf) {
-          const pdfBtn = document.createElement('a');
-          pdfBtn.href = paper.links.pdf;
-          pdfBtn.className = 'btn btn-publication';
-          pdfBtn.target = '_blank';
-          pdfBtn.innerHTML = '<span class="material-icons">picture_as_pdf</span> PDF';
-          contentCell.appendChild(pdfBtn);
-        }
-        
-        if (paper.links.video) {
-          const videoBtn = document.createElement('a');
-          videoBtn.href = 'javascript:void(0)';
-          videoBtn.className = 'btn btn-video btn-publication';
-          videoBtn.onclick = function() { openModal(paper.links.video); };
-          videoBtn.innerHTML = '<span class="material-icons">play_circle</span> Video';
-          contentCell.appendChild(videoBtn);
-        }
-        
-        if (paper.links.code) {
-          const codeBtn = document.createElement('a');
-          codeBtn.href = paper.links.code;
-          codeBtn.className = 'btn btn-publication';
-          codeBtn.target = '_blank';
-          codeBtn.innerHTML = '<span class="material-icons">code</span> Code';
-          contentCell.appendChild(codeBtn);
-        }
-        
-        // Create BibTeX button
-        const bibBtn = document.createElement('a');
-        bibBtn.href = 'javascript:void(0)';
-        bibBtn.className = 'btn btn-publication';
-        bibBtn.onclick = function() { toggleBib(bibId); };
-        bibBtn.innerHTML = '<span class="material-icons">format_quote</span> BibTeX';
-        contentCell.appendChild(bibBtn);
-        
-        // Create BibTeX content
-        const bibDiv = document.createElement('div');
-        bibDiv.id = bibId;
-        bibDiv.className = 'bibtex';
-        const pre = document.createElement('pre');
-        pre.textContent = paper.bibtex;
-        bibDiv.appendChild(pre);
-        contentCell.appendChild(bibDiv);
-        
-        // Append cells to row
-        row.appendChild(imageCell);
-        row.appendChild(contentCell);
-        
-        return row;
-    }
+  <section aria-labelledby="research-heading">
+    <h2 class="h-section" id="research-heading">Research</h2>
+    <p>All 11 publications are listed below. See also my
+       <a href="data/CV.pdf">CV</a> and
+       <a href="https://scholar.google.com/citations?user=hfU1wQwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
-    function loadPublicationsDirectly(publicationsData) {
-      const allContainer = document.getElementById('all-container');
-      const conferencesContainer = document.getElementById('conferences-container');
-      const workshopsContainer = document.getElementById('workshops-container');
-      
-      if (!allContainer || !conferencesContainer || !workshopsContainer) {
-        console.error('Publication containers not found');
-        return;
-      }
-      
-      console.log('Loading publications...');
-      
-      // Clear existing content
-      allContainer.innerHTML = '';
-      conferencesContainer.innerHTML = '';
-      workshopsContainer.innerHTML = '';
-      
-      // Populate all publications tab with same order as JSON
-      publicationsData.forEach(function(paper, index) {
-        const row = createPublicationRow(paper, 'all' + index);
-        allContainer.appendChild(row);
-      });
-      
-      // Populate categorized tabs
-      publicationsData.forEach(function(paper, index) {
-        // Determine which container to append to based on type field
-        if (paper.type === 'conference') {
-          const row = createPublicationRow(paper, 'conf' + index);
-          conferencesContainer.appendChild(row);
-        } else if (paper.type === 'workshop') {
-          const row = createPublicationRow(paper, 'workshop' + index);
-          workshopsContainer.appendChild(row);
-        } else {
-          // Default to workshops for any other type
-          const row = createPublicationRow(paper, 'workshop' + index);
-          workshopsContainer.appendChild(row);
-        }
-      });
-      
-      console.log('Publications loaded successfully!');
-    }
+    <div class="tab-navigation" role="tablist" aria-label="Filter publications">
+      <a class="tab-button active" role="tab" id="tab-all" href="#all" data-tab="all" aria-selected="true" tabindex="0">All <span class="pub-tab-count">(11)</span></a>
+      <a class="tab-button" role="tab" id="tab-conferences" href="#conferences" data-tab="conferences" aria-selected="false" tabindex="-1">Conferences &amp; Journals <span class="pub-tab-count">(8)</span></a>
+      <a class="tab-button" role="tab" id="tab-preprints" href="#preprints" data-tab="preprints" aria-selected="false" tabindex="-1">Preprints &amp; Workshops <span class="pub-tab-count">(3)</span></a>
+    </div>
 
-    async function loadContent() {
-      console.log('Starting to load content...');
-      
-      const introResponse = await fetch('pages/intro.html');
-      const introHtml = await introResponse.text();
-      document.getElementById('intro-content').innerHTML = introHtml;
-      console.log('Intro content loaded');
+    <ol class="pub-list" id="pub-list" data-filter="all">
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/vlc-fusion/"><img src="images/vlc_fusion.png" alt="VLC Fusion architecture: LiDAR and camera features are combined with vision-language model conditions through a CBAM, BatchNorm and FiLM block, raising detections from 6/20 to 12/20 objects compared with standard multi-modal fusion." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/vlc-fusion/">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</a></h3>
+<div class="pub-authors"><strong>Aditya Taparia</strong>, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake</div>
+<div class="pub-venue">European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD), 2026 &middot; <span class="pub-award">Shortlisted for Best Research Track Student Paper Award 🎗</span></div>
+<div class="description">We introduce VLC Fusion, a vision-language conditioned sensor fusion framework that uses a vision-language model to infer environmental cues — lighting, weather, occlusion — and adaptively reweight sensor modalities, improving object detection robustness under conditions where fixed fusion strategies degrade.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2505.12715" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/vlc-fusion/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-vlc-fusion" aria-expanded="false" aria-controls="bib-vlc-fusion"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-vlc-fusion" class="bibtex"><pre>@inproceedings{taparia2026vlc,
+    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},
+    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},
+    booktitle={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
+    year={2026}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="preprint">
+<div class="pub-body">
+<h3 class="pub-title"><a href="papers/anatomy-of-uncertainty/">The Anatomy of Uncertainty in LLMs</a></h3>
+<div class="pub-authors"><strong>Aditya Taparia</strong>, Ransalu Senanayake, Kowshik Thopalli, Vivek Sivaraman Narayanaswamy</div>
+<div class="pub-venue">ICBINB Workshop at the International Conference on Learning Representations (ICLR), 2026</div>
+<div class="description">We decompose language model uncertainty into three semantic sources — input ambiguity from underspecified prompts, knowledge gaps from insufficient parametric evidence, and decoding randomness from stochastic sampling — and show that their relative contributions shift across model sizes and tasks, with implications for reliability assessment and hallucination detection.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2603.24967" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/anatomy-of-uncertainty/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-anatomy-of-uncertainty" aria-expanded="false" aria-controls="bib-anatomy-of-uncertainty"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-anatomy-of-uncertainty" class="bibtex"><pre>@inproceedings{taparia2026anatomy,
+    title={The Anatomy of Uncertainty in LLMs},
+    author={Taparia, Aditya and Senanayake, Ransalu and Thopalli, Kowshik and Narayanaswamy, Vivek Sivaraman},
+    booktitle={ICBINB Workshop at the International Conference on Learning Representations (ICLR)},
+    year={2026}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/expressivity-bench/"><img src="images/Neurips_Behaviour.png" alt="Overview figure for ExpressivityBench, showing the generator-to-grader channel used to measure how much implicit signal a language model transmits." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/expressivity-bench/">ExpressivityBench: Can LLMs Communicate Implicitly?</a></h3>
+<div class="pub-authors">Joshua Tint, Som Sagar, <strong>Aditya Taparia</strong>, Kelly Raines, Bimsara Pathiraja, Caleb Liu, Ransalu Senanayake</div>
+<div class="pub-venue">Findings of the Association for Computational Linguistics: EACL, 2026</div>
+<div class="description">ExpressivityBench measures how well large language models convey information implicitly, modelling generation as an information-theoretic channel between a generator and a grader across nine tasks spanning emotion, tone, age, gender, and political slant. We find model strengths are uneven and strongly task-dependent, with affective content handled far better than sociolinguistic signals.</div>
+<div class="pub-links"><a href="https://aclanthology.org/2026.findings-eacl.235.pdf" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/expressivity-bench/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-expressivity-bench" aria-expanded="false" aria-controls="bib-expressivity-bench"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-expressivity-bench" class="bibtex"><pre>@inproceedings{tint2026expressivitybench,
+    title={ExpressivityBench: Can LLMs Communicate Implicitly?},
+    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Raines, Kelly and Pathiraja, Bimsara and Liu, Caleb and Senanayake, Ransalu},
+    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},
+    pages={4500--4515},
+    year={2026}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="preprint">
+<div class="pub-body">
+<h3 class="pub-title"><a href="papers/learning-to-configure/">Learning to Configure Agentic AI Systems</a></h3>
+<div class="pub-authors"><strong>Aditya Taparia</strong>, Som Sagar, Ransalu Senanayake</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="description">We formulate agent configuration as a semi-Markov decision process in which each configuration acts as a temporally extended option, and introduce ARC, which dynamically selects query-specific agent configurations rather than fixing one pipeline in advance — improving average reasoning accuracy by 31.3% and tool-use accuracy by 13.95%.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2602.11574" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/learning-to-configure/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-learning-to-configure" aria-expanded="false" aria-controls="bib-learning-to-configure"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-learning-to-configure" class="bibtex"><pre>@article{taparia2026learning,
+    title={Learning to Configure Agentic AI Systems},
+    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},
+    journal={arXiv preprint arXiv:2602.11574},
+    year={2026}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-body">
+<h3 class="pub-title"><a href="papers/abductive-reasoning/">Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments</a></h3>
+<div class="pub-authors">Mario A. Leiva, Noel Ngu, Joshua Shay Kricheli, <strong>Aditya Taparia</strong>, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran, Gerardo I. Simari</div>
+<div class="pub-venue">Proceedings of the AAAI Conference on Artificial Intelligence, 2026</div>
+<div class="description">When pre-trained perception models are deployed in novel environments, distribution shift makes them disagree. We cast the problem of reconciling those conflicting predictions as consistency-based abduction applied at test time rather than during training, achieving average relative improvements of roughly 13.6% in F1 and 16.6% in accuracy over the best individual model across 15 test datasets.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2505.19361" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/abductive-reasoning/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-abductive-reasoning" aria-expanded="false" aria-controls="bib-abductive-reasoning"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-abductive-reasoning" class="bibtex"><pre>@inproceedings{leiva2026consistency,
+    title={Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments},
+    author={Leiva, Mario A. and Ngu, Noel and Kricheli, Joshua Shay and Taparia, Aditya and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John and Simari, Gerardo I.},
+    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+    pages={19216--19223},
+    year={2026}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/batcave/"><img src="images/Neurips_SATA.png" alt="Overview figure for BaTCAVe, showing Bayesian concept activation vectors producing explanations of robot decisions with uncertainty estimates." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/batcave/">BaTCAVe: Trustworthy Explanations for Robot Behaviors</a></h3>
+<div class="pub-authors">Som Sagar, <strong>Aditya Taparia</strong>, Harsh Mankodiya, Pranav Bidare, Yifan Zhou, Ransalu Senanayake</div>
+<div class="pub-venue">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS), 2025</div>
+<div class="description">We introduce BaTCAVe, a Bayesian extension of concept activation vectors that attaches calibrated uncertainty estimates to concept-based explanations of robot decisions, making post-hoc interpretation of neural network policies trustworthy across both simulation platforms and real-world robotic systems.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2409.10733" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="#" class="btn btn-publication" data-video="videos/BaTCAVe Video.mp4"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/aditya-taparia/BaTCAVe" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a><a href="papers/batcave/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-batcave" aria-expanded="false" aria-controls="bib-batcave"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-batcave" class="bibtex"><pre>@inproceedings{sagar2025batcave,
+    title={BaTCAVe: Trustworthy Explanations for Robot Behaviors},
+    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},
+    booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+    pages={13867--13874},
+    year={2025}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/rlpo/"><img src="images/GenXAI.jpg" alt="Overview figure for RLPO, showing a diffusion model fine-tuned by reinforcement learning preference optimization to generate concept images that explain a classifier." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/rlpo/">Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks&#x27; Internal Representations</a></h3>
+<div class="pub-authors"><strong>Aditya Taparia</strong>, Som Sagar, Ransalu Senanayake</div>
+<div class="pub-venue">International Conference on Machine Learning (ICML), 2025</div>
+<div class="description">We propose RLPO, a reinforcement learning preference optimization method that frames concept-based explanation as an image generation problem, fine-tuning a vision-language generative model to automatically discover interpretable concepts a network has learned — including concepts difficult or impossible for humans to specify in advance.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2408.13438" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="#" class="btn btn-publication" data-video="videos/GenXAI Video.mp4"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/aditya-taparia/RLPO" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a><a href="papers/rlpo/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-rlpo" aria-expanded="false" aria-controls="bib-rlpo"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-rlpo" class="bibtex"><pre>@inproceedings{taparia2025explainable,
+    title={Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks&#x27; Internal Representations},
+    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},
+    booktitle={Proceedings of the 42nd International Conference on Machine Learning},
+    year={2025}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/mds-a/"><img src="images/mdsa.png" alt="Sample imagery from the MDS-A dataset, showing aerial scenes rendered under multiple simulated distribution shifts." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/mds-a/">Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation</a></h3>
+<div class="pub-authors">Noel Ngu, <strong>Aditya Taparia</strong>, Gerardo I. Simari, Mario A. Leiva, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran</div>
+<div class="pub-venue">Proceedings of the AAAI Symposium Series, 2025</div>
+<div class="description">We present MDS-A, a dataset of simulated aerial imagery paired with explicitly controlled distribution shifts, built for evaluating test-time error detection and model adaptation methods under conditions where a single held-out test set would not expose failure.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2502.13289" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/mds-a/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-mds-a" aria-expanded="false" aria-controls="bib-mds-a"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-mds-a" class="bibtex"><pre>@inproceedings{ngu2025multiple,
+    title={Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation},
+    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I. and Leiva, Mario A. and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John},
+    booktitle={Proceedings of the AAAI Symposium Series},
+    volume={5},
+    pages={379--383},
+    year={2025}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="preprint">
+<div class="pub-thumb"><a href="papers/red-teaming-diffusion/"><img src="images/Neurips_redteaming.png" alt="Overview figure for the red teaming work, showing a language model scoring mismatches between prompts and diffusion model outputs to produce a reward signal." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/red-teaming-diffusion/">LLM-Assisted Red Teaming of Diffusion Models through &quot;Failures Are Fated, But Can Be Faded&quot;</a></h3>
+<div class="pub-authors">Som Sagar, <strong>Aditya Taparia</strong>, Ransalu Senanayake</div>
+<div class="pub-venue">NeurIPS Workshop on Red Teaming GenAI, 2024</div>
+<div class="description">This extension of Failures Are Fated applies the framework to text-to-image diffusion models, using LLM-assisted generation of rewards and states and reinforcement learning search strategies to make discovery of failure modes more efficient.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2410.16738" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/red-teaming-diffusion/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-red-teaming-diffusion" aria-expanded="false" aria-controls="bib-red-teaming-diffusion"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-red-teaming-diffusion" class="bibtex"><pre>@inproceedings{sagar2024llm,
+    title={LLM-Assisted Red Teaming of Diffusion Models through &quot;Failures Are Fated, But Can Be Faded&quot;},
+    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},
+    booktitle={Red Teaming GenAI: What Can We Learn from Adversaries?},
+    year={2024}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-body">
+<h3 class="pub-title"><a href="papers/hpix/">Transforming satellite imagery into vector maps using modified GANs</a></h3>
+<div class="pub-authors"><strong>Aditya Taparia</strong>, Ali Kashif Bashir, Yaodong Zhu, Thippa Reddy Gdekallu, Keshab Nath</div>
+<div class="pub-venue">Alexandria Engineering Journal, 2024</div>
+<div class="description">We propose HPix, a modified GAN that generates vector tile maps directly from satellite imagery using two hierarchical frameworks operating at global and local levels, supporting applications from building footprint extraction and disaster impact analysis to urban planning and transport links.</div>
+<div class="pub-links"><a href="https://www.sciencedirect.com/science/article/pii/S1110016824010986" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="papers/hpix/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-hpix" aria-expanded="false" aria-controls="bib-hpix"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-hpix" class="bibtex"><pre>@article{taparia2024transforming,
+    title={Transforming satellite imagery into vector maps using modified GANs},
+    author={Taparia, Aditya and Bashir, Ali Kashif and Zhu, Yaodong and Gdekallu, Thippa Reddy and Nath, Keshab},
+    journal={Alexandria Engineering Journal},
+    volume={109},
+    pages={792--806},
+    year={2024},
+    doi={10.1016/j.aej.2024.09.074}
+}</pre></div>
+</div>
+</li>
+<li class="pub-item" data-category="conference">
+<div class="pub-thumb"><a href="papers/failures-are-fated/"><img src="images/ICML_1.png" alt="Overview figure for Failures Are Fated, showing a deep reinforcement learning agent exploring and reshaping the failure landscape of a large vision and language model." width="150" height="125" loading="lazy" decoding="async"></a></div><div class="pub-body">
+<h3 class="pub-title"><a href="papers/failures-are-fated/">Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models</a></h3>
+<div class="pub-authors">Som Sagar, <strong>Aditya Taparia</strong>, Ransalu Senanayake</div>
+<div class="pub-venue">International Conference on Machine Learning (ICML), 2024 &middot; <span class="pub-award">Spotlight (top 3.5%) 🎗</span></div>
+<div class="description">We introduce a deep reinforcement learning framework that maps the failure landscape of large vision and language models, then restructures that landscape with limited human feedback to mitigate accuracy failures, social biases, and misalignment.</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2406.07145" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="#" class="btn btn-publication" data-video="videos/Failure Video.mp4"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/somsagar07/FailureShiftRL" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a><a href="papers/failures-are-fated/" class="btn btn-publication"><span class="material-icons">article</span> Details</a><button type="button" class="btn btn-publication" data-bibtex-toggle="bib-failures-are-fated" aria-expanded="false" aria-controls="bib-failures-are-fated"><span class="material-icons">format_quote</span> BibTeX</button></div>
+<div id="bib-failures-are-fated" class="bibtex"><pre>@inproceedings{sagar2024failures,
+    title={Failures are fated, but can be faded: characterizing and mitigating unwanted behaviors in large-scale vision and language models},
+    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},
+    booktitle={Proceedings of the 41st International Conference on Machine Learning},
+    pages={42999--43023},
+    year={2024}
+}</pre></div>
+</div>
+</li>
+    </ol>
+  </section>
 
-      // Fetch and load news content
-      const newsResponse = await fetch('pages/news.html');
-      const newsHtml = await newsResponse.text();
-      document.getElementById('news-content').innerHTML = newsHtml;
-      console.log('News content loaded');
-
-      const publicationsResponse = await fetch('pages/publication.html');
-      const publicationsHtml = await publicationsResponse.text();
-      document.getElementById('publications-content').innerHTML = publicationsHtml;
-      console.log('Publications HTML loaded');
-      
-      // Load publications data from JSON file
-      console.log('Loading publications data from JSON...');
-      try {
-        const publicationsDataResponse = await fetch('data/publications.json');
-        const publicationsData = await publicationsDataResponse.json();
-        console.log('Publications data loaded successfully');
-        
-        // Execute the publication loading with the data
-        console.log('Loading publications directly...');
-        loadPublicationsDirectly(publicationsData);
-      } catch (error) {
-        console.error('Error loading publications data:', error);
-        // Fallback: show error message
-        const conferencesContainer = document.getElementById('conferences-container');
-        const workshopsContainer = document.getElementById('workshops-container');
-        if (conferencesContainer) {
-          conferencesContainer.innerHTML = '<tr><td colspan="2">Error loading publications. Please try again later.</td></tr>';
-        }
-        if (workshopsContainer) {
-          workshopsContainer.innerHTML = '<tr><td colspan="2">Error loading publications. Please try again later.</td></tr>';
-        }
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', loadContent);
-  </script>
-
-  <script>
-    function toggleBib(id) {
-      document.getElementById(id).classList.toggle('show');
-    }
-  </script>
-
-  <script>
-    function switchTab(tabName) {
-      // Hide all tab contents
-      const tabContents = document.querySelectorAll('.tab-content');
-      tabContents.forEach(tab => tab.classList.remove('active'));
-      
-      // Remove active class from all buttons
-      const tabButtons = document.querySelectorAll('.tab-button');
-      tabButtons.forEach(button => button.classList.remove('active'));
-      
-      // Show selected tab content
-      document.getElementById(tabName + '-tab').classList.add('active');
-      
-      // Add active class to clicked button
-      event.target.classList.add('active');
-    }
-  </script>
-
-  <script>
-    const modal = document.getElementById('videoModal');
-    const videoEl = document.getElementById('modalVideo');
-
-    function openModal(src) {
-      videoEl.querySelector('source').src = src;
-      videoEl.load();
-      modal.style.display = 'flex';
-    }
-
-    function closeModal() {
-      videoEl.pause();
-      modal.style.display = 'none';
-    }
-
-    // close if user clicks outside the content
-    modal.addEventListener('click', e => {
-      if (e.target === modal) closeModal();
-    });
-  </script>
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="main.js" defer></script>
 </body>
-
 </html>

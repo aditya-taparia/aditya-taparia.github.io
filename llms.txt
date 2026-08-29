@@ -1,0 +1,50 @@
+# Aditya Taparia
+
+> Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.
+> Contact: ataparia@asu.edu
+
+## Research focus
+
+- Concept-based explainability: how neural networks form and use high-level abstractions
+- Uncertainty quantification and decomposition in large language models
+- Failure diagnosis and red teaming of vision-language and text-to-image models
+- Vision-language conditioned sensor fusion for robust object detection
+- Test-time error detection and model adaptation under distribution shift
+- Agentic AI systems: learning to configure multi-agent pipelines
+- Interpretability and uncertainty-aware explanation of robot policies
+
+## Pages
+
+- [Homepage](https://aditya-taparia.github.io/): biography, news, and all publications
+- [Publications](https://aditya-taparia.github.io/papers/): complete list of 11 publications
+- [CV](https://aditya-taparia.github.io/data/CV.pdf): curriculum vitae (PDF)
+
+## Publications
+
+- [VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection](https://aditya-taparia.github.io/papers/vlc-fusion/) — ECML PKDD 2026. A sensor fusion framework that uses a vision-language model to read environmental context and adaptively reweight modalities, making object detection robust to lighting, weather, and occlusion shifts. Shortlisted for Best Research Track Student Paper Award. Authors: Aditya Taparia, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake.
+- [The Anatomy of Uncertainty in LLMs](https://aditya-taparia.github.io/papers/anatomy-of-uncertainty/) — ICLR Workshop 2026. Decomposes LLM uncertainty into input ambiguity, knowledge gaps, and decoding randomness, showing their relative weight changes with model scale and task — a more actionable signal than a single confidence score. Authors: Aditya Taparia, Ransalu Senanayake, Kowshik Thopalli, Vivek Sivaraman Narayanaswamy.
+- [ExpressivityBench: Can LLMs Communicate Implicitly?](https://aditya-taparia.github.io/papers/expressivity-bench/) — Findings of EACL 2026. An information-theoretic benchmark for implicit communication in LLMs across nine tasks, showing models convey emotion and tone well but lag on sociolinguistic signals like age, gender, and political slant. Authors: Joshua Tint, Som Sagar, Aditya Taparia, Kelly Raines, Bimsara Pathiraja, Caleb Liu, Ransalu Senanayake.
+- [Learning to Configure Agentic AI Systems](https://aditya-taparia.github.io/papers/learning-to-configure/) — arXiv 2026. ARC treats agent configuration as a semi-Markov decision process and learns to pick a query-specific configuration per request, improving reasoning accuracy by 31.3% and tool-use accuracy by 13.95% over fixed pipelines. Authors: Aditya Taparia, Som Sagar, Ransalu Senanayake.
+- [Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments](https://aditya-taparia.github.io/papers/abductive-reasoning/) — AAAI 2026. Reconciles conflicting predictions from multiple pre-trained perception models under distribution shift by treating it as a test-time consistency-based abduction problem, beating the best single model by ~13.6% F1 across 15 datasets. Authors: Mario A. Leiva, Noel Ngu, Joshua Shay Kricheli, Aditya Taparia, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran, Gerardo I. Simari.
+- [BaTCAVe: Trustworthy Explanations for Robot Behaviors](https://aditya-taparia.github.io/papers/batcave/) — IROS 2025. A Bayesian concept-based explainability method that reports calibrated uncertainty alongside each explanation of a robot's decision, validated in simulation and on real robots. Authors: Som Sagar, Aditya Taparia, Harsh Mankodiya, Pranav Bidare, Yifan Zhou, Ransalu Senanayake.
+- [Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations](https://aditya-taparia.github.io/papers/rlpo/) — ICML 2025. Frames concept-based explanation as image generation and uses RL preference optimization to automatically discover what concepts a network has internally learned, including ones humans would not think to name. Authors: Aditya Taparia, Som Sagar, Ransalu Senanayake.
+- [Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation](https://aditya-taparia.github.io/papers/mds-a/) — AAAI Symposium 2025. An aerial imagery dataset with explicitly controlled distribution shifts, designed for benchmarking test-time error detection and model adaptation. Authors: Noel Ngu, Aditya Taparia, Gerardo I. Simari, Mario A. Leiva, Ransalu Senanayake, Paulo Shakarian, Nathaniel D. Bastian, John Corcoran.
+- [LLM-Assisted Red Teaming of Diffusion Models through "Failures Are Fated, But Can Be Faded"](https://aditya-taparia.github.io/papers/red-teaming-diffusion/) — NeurIPS Workshop 2024. Extends the Failures Are Fated framework to text-to-image diffusion models, using an LLM to generate reward signals and states for reinforcement learning-driven red teaming. Authors: Som Sagar, Aditya Taparia, Ransalu Senanayake.
+- [Transforming satellite imagery into vector maps using modified GANs](https://aditya-taparia.github.io/papers/hpix/) — Alexandria Eng. J. 2024. HPix uses a hierarchical modified GAN to generate vector tile maps directly from satellite images, for building footprints, disaster analysis, and urban planning. Authors: Aditya Taparia, Ali Kashif Bashir, Yaodong Zhu, Thippa Reddy Gdekallu, Keshab Nath.
+- [Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models](https://aditya-taparia.github.io/papers/failures-are-fated/) — ICML 2024. A deep RL method that systematically explores where large vision-language models fail, then uses limited human feedback to reshape that failure landscape and mitigate bias and misalignment. Spotlight (top 3.5%). Authors: Som Sagar, Aditya Taparia, Ransalu Senanayake.
+
+## Recent news
+
+- May '26: Our paper "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection" was accepted to ECML PKDD'26 and shortlisted for the Best Research Track Student Paper Award 🎗.
+- May '26: Joined  Bosch as a Research Intern.
+- Jan '26: Our paper "ExpressivityBench: Can LLMs Communicate Implicitly?" was accepted to Findings of EACL'26.
+- Nov '25: Our paper "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments" was accepted to AAAI'26.
+- Jun '25: Our paper "BaTCAVe: Trustworthy Explanations for Robot Behaviors" was accepted to IROS'25.
+- May '25: Joined  Lawrence Livermore National Laboratory as a Student Research Intern in the MIG group.
+
+## Profiles
+
+- https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en
+- https://github.com/aditya-taparia
+- https://www.linkedin.com/in/aditya-taparia/
+- https://arxiv.org/a/taparia_a_1

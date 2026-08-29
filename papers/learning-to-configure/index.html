@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learning to Configure Agentic AI Systems — Aditya Taparia</title>
+<meta name="description" content="ARC treats agent configuration as a semi-Markov decision process and learns to pick a query-specific configuration per request, improving reasoning accuracy by 31.3% and tool-use accuracy by 13.95% over fixed pipelines.">
+<meta name="author" content="Aditya Taparia">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://aditya-taparia.github.io/papers/learning-to-configure/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Aditya Taparia">
+<meta property="og:title" content="Learning to Configure Agentic AI Systems — Aditya Taparia">
+<meta property="og:description" content="ARC treats agent configuration as a semi-Markov decision process and learns to pick a query-specific configuration per request, improving reasoning accuracy by 31.3% and tool-use accuracy by 13.95% over fixed pipelines.">
+<meta property="og:url" content="https://aditya-taparia.github.io/papers/learning-to-configure/">
+<meta property="og:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta property="og:image:alt" content="Aditya Taparia">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Learning to Configure Agentic AI Systems — Aditya Taparia">
+<meta name="twitter:description" content="ARC treats agent configuration as a semi-Markov decision process and learns to pick a query-specific configuration per request, improving reasoning accuracy by 31.3% and tool-use accuracy by 13.95% over fixed pipelines.">
+<meta name="twitter:image" content="https://aditya-taparia.github.io/images/profile_pic.jpg">
+<meta name="twitter:image:alt" content="Aditya Taparia">
+<meta name="theme-color" content="#FAFAFA">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="../../styles.css">
+<link rel="icon" type="image/png" href="../../images/logo.png">
+<link rel="apple-touch-icon" href="../../images/logo.png">
+<meta name="google-site-verification" content="cHoT5VMN1dBK_WagCseeJGUcM1rw6X4arZRJfz0cEbE">
+<!-- GoatCounter: cookieless, no personal data, private dashboard -->
+<script data-goatcounter="https://adityataparia.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+<meta name="citation_title" content="Learning to Configure Agentic AI Systems">
+<meta name="citation_author" content="Aditya Taparia">
+<meta name="citation_author" content="Som Sagar">
+<meta name="citation_author" content="Ransalu Senanayake">
+<meta name="citation_publication_date" content="2026">
+<meta name="citation_arxiv_id" content="2602.11574">
+<meta name="citation_pdf_url" content="https://arxiv.org/pdf/2602.11574">
+<meta name="citation_language" content="en">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "@id": "https://aditya-taparia.github.io/papers/learning-to-configure/#article",
+  "name": "Learning to Configure Agentic AI Systems",
+  "headline": "Learning to Configure Agentic AI Systems",
+  "url": "https://aditya-taparia.github.io/papers/learning-to-configure/",
+  "mainEntityOfPage": "https://aditya-taparia.github.io/papers/learning-to-configure/",
+  "datePublished": "2026",
+  "inLanguage": "en",
+  "abstract": "We formulate agent configuration as a semi-Markov decision process in which each configuration acts as a temporally extended option, and introduce ARC, which dynamically selects query-specific agent configurations rather than fixing one pipeline in advance — improving average reasoning accuracy by 31.3% and tool-use accuracy by 13.95%.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Aditya Taparia"
+    },
+    {
+      "@type": "Person",
+      "name": "Som Sagar"
+    },
+    {
+      "@type": "Person",
+      "name": "Ransalu Senanayake"
+    }
+  ],
+  "publisher": {
+    "@type": "Organization",
+    "name": "arXiv preprint"
+  },
+  "isPartOf": {
+    "@type": "Periodical",
+    "name": "arXiv preprint"
+  },
+  "identifier": "arXiv:2602.11574"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Aditya Taparia",
+      "item": "https://aditya-taparia.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Publications",
+      "item": "https://aditya-taparia.github.io/papers/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Learning to Configure Agentic AI Systems",
+      "item": "https://aditya-taparia.github.io/papers/learning-to-configure/"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main" class="page">
+
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="../../">Aditya Taparia</a> &rsaquo;
+    <a href="../">Publications</a> &rsaquo;
+    <span>arXiv 2026</span>
+  </nav>
+
+  <article>
+    <header class="paper-header">
+      <h1 class="paper-title">Learning to Configure Agentic AI Systems</h1>
+      <p class="paper-authors"><strong>Aditya Taparia</strong>, Som Sagar, Ransalu Senanayake</p>
+      <p class="paper-meta">arXiv preprint, 2026</p>
+      
+      <div class="pub-links"><a href="https://arxiv.org/abs/2602.11574" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a></div>
+    </header>
+
+    
+
+    <section class="paper-section">
+      <h2>Summary</h2>
+      <p>We formulate agent configuration as a semi-Markov decision process in which each configuration acts as a temporally extended option, and introduce ARC, which dynamically selects query-specific agent configurations rather than fixing one pipeline in advance — improving average reasoning accuracy by 31.3% and tool-use accuracy by 13.95%.</p>
+    </section>
+
+    <section class="paper-section">
+      <h2>BibTeX</h2>
+      <pre class="paper-bibtex" id="bibtex-learning-to-configure">@article{taparia2026learning,
+    title={Learning to Configure Agentic AI Systems},
+    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},
+    journal={arXiv preprint arXiv:2602.11574},
+    year={2026}
+}</pre>
+      <button type="button" class="btn btn-publication" data-copy-target="bibtex-learning-to-configure" data-label="Copy BibTeX">
+        <span class="material-icons">content_copy</span> Copy BibTeX
+      </button>
+    </section>
+  </article>
+
+  <nav class="footer-nav" aria-label="Publication navigation">
+    <a href="../expressivity-bench/">&larr; Findings of EACL 2026</a> &middot; <a href="../">All publications</a> &middot; <a href="../abductive-reasoning/">AAAI 2026 &rarr;</a>
+  </nav>
+
+</main>
+<footer class="site-footer page">
+<p>&copy; 2026 Aditya Taparia &middot; <a href="mailto:ataparia@asu.edu">ataparia@asu.edu</a></p>
+</footer>
+<script src="../../main.js" defer></script>
+</body>
+</html>
