@@ -427,7 +427,7 @@ def build_index(site, pubs, news, intro):
 
   <section class="home-section" aria-labelledby="research-heading">
     <h2 class="h-section" id="research-heading">Research</h2>
-    <p>All {len(pubs)} publications are listed below. See also my
+    <p>See my
        <a href="data/CV.pdf">CV</a> and
        <a href="https://scholar.google.com/citations?user=hfU1wQwAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
 
