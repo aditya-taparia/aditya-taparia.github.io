@@ -1,5 +1,6 @@
 {
   "name": "Aditya Taparia",
+  "tagline": "PhD Student, Computer Science · Arizona State University · LENS Lab",
   "url": "https://aditya-taparia.github.io",
   "title": "Aditya Taparia — CS PhD Student, Arizona State University | Concept-Driven AI, Explainability, Uncertainty in Foundation Models",
   "description": "Aditya Taparia is a computer science PhD student at Arizona State University (LENS Lab), advised by Ransalu Senanayake. He works on the conceptual foundations of neural networks: concept-based explainability, uncertainty in large language models, failure diagnosis of vision-language models, and robust sensor fusion.",
@@ -39,8 +40,8 @@
     { "label": "Email",          "icon": "email",           "href": "mailto:ataparia@asu.edu",                                        "external": false },
     { "label": "CV",             "icon": "picture_as_pdf",  "href": "data/CV.pdf",                                                    "external": false },
     { "label": "Google Scholar", "icon": "school",          "href": "https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en",   "external": true  },
-    { "label": "LinkedIn",       "icon": "business",        "href": "https://www.linkedin.com/in/aditya-taparia/",                    "external": true  },
-    { "label": "GitHub",         "icon": "code",            "href": "https://github.com/aditya-taparia",                              "external": true  }
+    { "label": "LinkedIn",       "icon": "linkedin",        "href": "https://www.linkedin.com/in/aditya-taparia/",                    "external": true  },
+    { "label": "GitHub",         "icon": "github",          "href": "https://github.com/aditya-taparia",                              "external": true  }
   ],
   "same_as": [
     "https://scholar.google.com/citations?user=hfU1wQwAAAAJ&hl=en",

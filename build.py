@@ -28,9 +28,52 @@ BUILD_DATE = date.today().isoformat()
 FONT_LINKS = (
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n'
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-    '<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">\n'
+    '<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">\n'
     '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">'
 )
+
+
+# Real brand marks for the platforms that have one. Material Icons only
+# offers stand-ins here -- a generic office block for LinkedIn, angle
+# brackets for GitHub -- which read as "some company" and "some code"
+# rather than as the sites they link to. Paths are the official marks
+# (Simple Icons, 24x24, CC0); `fill: currentColor` in the stylesheet keeps
+# them in step with the button's hover inversion.
+BRAND_ICON_PATHS = {
+    "linkedin": (
+        "M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 "
+        "0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 "
+        "1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 "
+        "7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 "
+        "2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 "
+        "2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 "
+        ".774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 "
+        "23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+    ),
+    "github": (
+        "M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 "
+        "11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-"
+        "4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 "
+        "17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 "
+        "1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-"
+        "1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 "
+        "1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 "
+        "1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 "
+        "2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765"
+        ".84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 "
+        "1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20"
+        ".565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+    ),
+}
+
+
+def icon_markup(name):
+    """A brand mark where one exists, otherwise the Material Icons ligature."""
+    path = BRAND_ICON_PATHS.get(name)
+    if path:
+        return ('<svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true" '
+                'focusable="false"><path d="%s"/></svg>' % path)
+    return '<span class="material-icons">%s</span>' % esc(name)
 
 
 # --------------------------------------------------------------- helpers ---
@@ -223,7 +266,7 @@ def pub_card(site, pub, prefix="", index=0):
     if has_thumb:
         thumb = (
             '<div class="pub-thumb">'
-            '<a href="%s"><img src="%s%s" alt="%s" width="150" height="125" '
+            '<a href="%s"><img src="%s%s" alt="%s" width="178" height="148" '
             'loading="lazy" decoding="async"></a>'
             '</div>'
         ) % (esc(paper_url), prefix, esc(pub["image"]),
@@ -262,7 +305,7 @@ def pub_card(site, pub, prefix="", index=0):
 <h3 class="pub-title"><a href="{esc(paper_url)}">{esc(pub['title'])}</a></h3>
 <div class="pub-authors">{authors_html(pub['authors'])}</div>
 <div class="pub-venue">{venue_line}</div>
-<div class="description">{esc(pub['description'])}</div>
+<div class="description">{esc(pub['tldr'])}</div>
 <div class="pub-links">{''.join(buttons)}</div>
 <div id="{bib_id}" class="bibtex"><pre>{esc(pub['bibtex'])}</pre></div>
 </div>
@@ -307,12 +350,18 @@ def build_index(site, pubs, news, intro):
         ],
     }
 
+    # The rail's links break into two centred rows, the fuller one on top.
+    # An explicit break element beats letting flex-wrap choose, which would
+    # reshuffle the moment a label or the webfont changed width.
+    break_after = (len(site["links"]) + 1) // 2
     links = []
-    for link in site["links"]:
+    for i, link in enumerate(site["links"]):
         target = ' target="_blank" rel="noopener"' if link["external"] else ""
         links.append(
-            '<a href="%s" class="btn"%s><span class="material-icons">%s</span> %s</a>'
-            % (esc(link["href"]), target, esc(link["icon"]), esc(link["label"])))
+            '<a href="%s" class="btn"%s>%s %s</a>'
+            % (esc(link["href"]), target, icon_markup(link["icon"]), esc(link["label"])))
+        if i + 1 == break_after:
+            links.append('<span class="link-break" aria-hidden="true"></span>')
 
     news_rows = []
     for item in news:
@@ -353,18 +402,19 @@ def build_index(site, pubs, news, intro):
   <section class="intro-grid">
     <div class="intro-text">
       <div class="name-block"><h1 class="h-name">{esc(site['name'])}</h1></div>
+      <p class="h-tagline">{esc(site['tagline'])}</p>
 {intro}
-      <div class="link-row">
-{chr(10).join('        ' + l for l in links)}
-      </div>
     </div>
     <div class="intro-photo">
       <img src="{esc(site['profile_image'])}" alt="{esc(site['profile_image_alt'])}"
-           width="240" height="240" decoding="async">
+           width="768" height="1020" decoding="async">
+    </div>
+    <div class="link-row">
+{chr(10).join('      ' + l for l in links)}
     </div>
   </section>
 
-  <section aria-labelledby="news-heading">
+  <section class="home-section" aria-labelledby="news-heading">
     <h2 class="h-section" id="news-heading">News</h2>
     <div class="news-box">
       <table class="news-table">
@@ -375,7 +425,7 @@ def build_index(site, pubs, news, intro):
     </div>
   </section>
 
-  <section aria-labelledby="research-heading">
+  <section class="home-section" aria-labelledby="research-heading">
     <h2 class="h-section" id="research-heading">Research</h2>
     <p>All {len(pubs)} publications are listed below. See also my
        <a href="data/CV.pdf">CV</a> and
