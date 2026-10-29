@@ -21,11 +21,17 @@ Then:
 
 ```sh
 python3 build.py     # regenerate the site
-python3 verify.py    # 89 checks: links, BibTeX, structured data, idempotency
+python3 verify.py    # 90 checks: links, BibTeX, structured data, idempotency
 ```
 
-Pushing to `main` runs both in GitHub Actions and commits the output, so
-running them locally is optional — but it is the fastest way to see mistakes.
+Every push to `main` builds and verifies the site, then deploys the generated
+HTML and public assets directly to GitHub Pages. Pull requests run the same
+build and verification without deploying. Failed checks prevent deployment.
+The workflow does not commit generated files back to the repository.
+
+In repository Settings > Pages, set the publishing source to **GitHub Actions**.
+You can also run **Build and deploy site** manually from the Actions tab.
+Local builds remain useful for previewing changes before pushing.
 
 ### Generated — do not edit by hand
 
@@ -86,3 +92,4 @@ gives them a plain-text summary of the profile and every paper.
 ---
 
 Built by Aditya Taparia • [ataparia@asu.edu](mailto:ataparia@asu.edu)
+
