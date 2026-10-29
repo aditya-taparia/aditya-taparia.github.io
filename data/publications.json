@@ -3,7 +3,17 @@
     "id": "vlc_fusion",
     "slug": "vlc-fusion",
     "title": "VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection",
-    "authors": ["Aditya Taparia", "Noel Ngu", "Mario Leiva", "Joshua Shay Kricheli", "John Corcoran", "Nathaniel D. Bastian", "Gerardo Simari", "Paulo Shakarian", "Ransalu Senanayake"],
+    "authors": [
+      "Aditya Taparia",
+      "Noel Ngu",
+      "Mario Leiva",
+      "Joshua Shay Kricheli",
+      "John Corcoran",
+      "Nathaniel D. Bastian",
+      "Gerardo Simari",
+      "Paulo Shakarian",
+      "Ransalu Senanayake"
+    ],
     "venue": "European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)",
     "venue_short": "ECML PKDD 2026",
     "venue_type": "conference",
@@ -19,23 +29,30 @@
     "arxiv_id": "2505.12715",
     "links": {
       "pdf": "https://arxiv.org/abs/2505.12715",
-      "pdf_direct": "https://arxiv.org/pdf/2505.12715"
+      "pdf_direct": "https://arxiv.org/pdf/2505.12715",
+      "video": "https://www.youtube.com/watch?v=iFKvibdIzTg",
+      "code": "https://github.com/aditya-taparia/VLCFusion"
     },
-    "bibtex": "@inproceedings{taparia2026vlc,\n    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},\n    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},\n    booktitle={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},\n    year={2026}\n}"
+    "bibtex": "@inproceedings{taparia2026vlc,\n    title={{VLC} Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},\n    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},\n    booktitle={Machine Learning and Knowledge Discovery in Databases. Research Track and Applied Data Science Track},\n    year={2027},\n    url={https://doi.org/10.1007/978-3-032-37679-4_4},\n    eprint={2505.12715},\n    archivePrefix={arXiv},\n    pages={51--68},\n    volume={16948},\n    series={Lecture Notes in Computer Science},\n    publisher={Springer Nature Switzerland},\n    address={Cham},\n    doi={10.1007/978-3-032-37679-4_4},\n    isbn={978-3-032-37679-4}\n}"
   },
   {
     "id": "anatomy_uncertainty",
     "slug": "anatomy-of-uncertainty",
     "title": "The Anatomy of Uncertainty in LLMs",
-    "authors": ["Aditya Taparia", "Ransalu Senanayake", "Kowshik Thopalli", "Vivek Sivaraman Narayanaswamy"],
+    "authors": [
+      "Aditya Taparia",
+      "Ransalu Senanayake",
+      "Kowshik Thopalli",
+      "Vivek Sivaraman Narayanaswamy"
+    ],
     "venue": "ICBINB Workshop at the International Conference on Learning Representations (ICLR)",
     "venue_short": "ICLR Workshop 2026",
     "venue_type": "workshop",
     "year": "2026",
     "sort_key": "2026-04",
     "category": "preprint",
-    "image": null,
-    "image_alt": null,
+    "image": "images/anatomy-of-uncertainty.png",
+    "image_alt": "Examples of input, knowledge, and decoding uncertainty in LLMs, with semantic entropy estimates and corresponding corrective actions.",
     "description": "We decompose language model uncertainty into three semantic sources — input ambiguity from underspecified prompts, knowledge gaps from insufficient parametric evidence, and decoding randomness from stochastic sampling — and show that their relative contributions shift across model sizes and tasks, with implications for reliability assessment and hallucination detection.",
     "tldr": "Decomposes LLM uncertainty into input ambiguity, knowledge gaps, and decoding randomness, showing their relative weight changes with model scale and task — a more actionable signal than a single confidence score.",
     "arxiv_id": "2603.24967",
@@ -43,21 +60,29 @@
       "pdf": "https://arxiv.org/abs/2603.24967",
       "pdf_direct": "https://arxiv.org/pdf/2603.24967"
     },
-    "bibtex": "@inproceedings{taparia2026anatomy,\n    title={The Anatomy of Uncertainty in LLMs},\n    author={Taparia, Aditya and Senanayake, Ransalu and Thopalli, Kowshik and Narayanaswamy, Vivek Sivaraman},\n    booktitle={ICBINB Workshop at the International Conference on Learning Representations (ICLR)},\n    year={2026}\n}"
+    "bibtex": "@inproceedings{taparia2026anatomy,\n    title={The Anatomy of Uncertainty in {LLMs}},\n    author={Taparia, Aditya and Senanayake, Ransalu and Thopalli, Kowshik and Narayanaswamy, Vivek},\n    booktitle={ICLR Workshop on I Can't Believe It's Not Better: Where Large Language Models Need to Improve},\n    year={2026},\n    url={https://openreview.net/forum?id=0GYclsjLUb},\n    eprint={2603.24967},\n    archivePrefix={arXiv}\n}"
   },
   {
     "id": "expressivity_bench",
     "slug": "expressivity-bench",
     "title": "ExpressivityBench: Can LLMs Communicate Implicitly?",
-    "authors": ["Joshua Tint", "Som Sagar", "Aditya Taparia", "Kelly Raines", "Bimsara Pathiraja", "Caleb Liu", "Ransalu Senanayake"],
+    "authors": [
+      "Joshua Tint",
+      "Som Sagar",
+      "Aditya Taparia",
+      "Kelly Raines",
+      "Bimsara Pathiraja",
+      "Caleb Liu",
+      "Ransalu Senanayake"
+    ],
     "venue": "Findings of the Association for Computational Linguistics: EACL",
     "venue_short": "Findings of EACL 2026",
     "venue_type": "conference",
     "year": "2026",
     "sort_key": "2026-03",
     "category": "conference",
-    "image": "images/Neurips_Behaviour.png",
-    "image_alt": "Overview figure for ExpressivityBench, showing the generator-to-grader channel used to measure how much implicit signal a language model transmits.",
+    "image": "images/expressivity-bench.png",
+    "image_alt": "A generator encodes a signal in text, a grader estimates the signal, and mutual information measures implicit communication.",
     "description": "ExpressivityBench measures how well large language models convey information implicitly, modelling generation as an information-theoretic channel between a generator and a grader across nine tasks spanning emotion, tone, age, gender, and political slant. We find model strengths are uneven and strongly task-dependent, with affective content handled far better than sociolinguistic signals.",
     "tldr": "An information-theoretic benchmark for implicit communication in LLMs across nine tasks, showing models convey emotion and tone well but lag on sociolinguistic signals like age, gender, and political slant.",
     "arxiv_id": "2411.08010",
@@ -66,21 +91,29 @@
       "pdf_direct": "https://aclanthology.org/2026.findings-eacl.235.pdf",
       "arxiv": "https://arxiv.org/abs/2411.08010"
     },
-    "bibtex": "@inproceedings{tint2026expressivitybench,\n    title={ExpressivityBench: Can LLMs Communicate Implicitly?},\n    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Raines, Kelly and Pathiraja, Bimsara and Liu, Caleb and Senanayake, Ransalu},\n    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},\n    pages={4500--4515},\n    year={2026}\n}"
+    "bibtex": "@inproceedings{tint2026expressivitybench,\n    title={{ExpressivityBench}: Can {LLMs} Communicate Implicitly?},\n    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Raines, Kelly and Pathiraja, Bimsara and Liu, Caleb and Senanayake, Ransalu},\n    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},\n    pages={4500--4515},\n    year={2026},\n    doi={10.18653/v1/2026.findings-eacl.235},\n    publisher={Association for Computational Linguistics},\n    address={Rabat, Morocco},\n    url={https://aclanthology.org/2026.findings-eacl.235/}\n}"
   },
   {
     "id": "learning_to_configure",
     "slug": "learning-to-configure",
     "title": "Learning to Configure Agentic AI Systems",
-    "authors": ["Aditya Taparia", "Som Sagar", "Ransalu Senanayake"],
-    "venue": "arXiv preprint",
-    "venue_short": "arXiv 2026",
-    "venue_type": "preprint",
+    "authors": [
+      "Aditya Taparia",
+      "Som Sagar",
+      "Ransalu Senanayake"
+    ],
+    "venue": "NeurIPS Workshop on AgenticOS",
+    "venue_short": "NeurIPS AgenticOS Workshop 2026",
+    "venue_type": "workshop",
     "year": "2026",
-    "sort_key": "2026-02",
+    "sort_key": "2026-12",
     "category": "preprint",
-    "image": null,
-    "image_alt": null,
+    "equal_contribution": [
+      "Aditya Taparia",
+      "Som Sagar"
+    ],
+    "image": "images/learning-to-configure.png",
+    "image_alt": "ARC dynamically selects tools, workflows, and computational budgets for each input to an agentic AI system.",
     "description": "We formulate agent configuration as a semi-Markov decision process in which each configuration acts as a temporally extended option, and introduce ARC, which dynamically selects query-specific agent configurations rather than fixing one pipeline in advance — improving average reasoning accuracy by 31.3% and tool-use accuracy by 13.95%.",
     "tldr": "ARC treats agent configuration as a semi-Markov decision process and learns to pick a query-specific configuration per request, improving reasoning accuracy by 31.3% and tool-use accuracy by 13.95% over fixed pipelines.",
     "arxiv_id": "2602.11574",
@@ -88,21 +121,31 @@
       "pdf": "https://arxiv.org/abs/2602.11574",
       "pdf_direct": "https://arxiv.org/pdf/2602.11574"
     },
-    "bibtex": "@article{taparia2026learning,\n    title={Learning to Configure Agentic AI Systems},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    journal={arXiv preprint arXiv:2602.11574},\n    year={2026}\n}"
+    "bibtex": "@inproceedings{taparia2026learning,\n    title={Learning to Configure Agentic {AI} Systems},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    booktitle={AgenticOS: Co-designing Systems and ML Foundations of an OS Layer for Agentic AI, NeurIPS Workshop},\n    year={2026},\n    url={https://arxiv.org/abs/2602.11574},\n    eprint={2602.11574},\n    archivePrefix={arXiv},\n    note={Accepted; non-archival workshop}\n}"
   },
   {
     "id": "abductive_reasoning",
     "slug": "abductive-reasoning",
     "title": "Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments",
-    "authors": ["Mario A. Leiva", "Noel Ngu", "Joshua Shay Kricheli", "Aditya Taparia", "Ransalu Senanayake", "Paulo Shakarian", "Nathaniel D. Bastian", "John Corcoran", "Gerardo I. Simari"],
+    "authors": [
+      "Mario A. Leiva",
+      "Noel Ngu",
+      "Joshua Shay Kricheli",
+      "Aditya Taparia",
+      "Ransalu Senanayake",
+      "Paulo Shakarian",
+      "Nathaniel D. Bastian",
+      "John Corcoran",
+      "Gerardo I. Simari"
+    ],
     "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
     "venue_short": "AAAI 2026",
     "venue_type": "conference",
     "year": "2026",
     "sort_key": "2026-01",
     "category": "conference",
-    "image": null,
-    "image_alt": null,
+    "image": "images/abductive-reasoning.png",
+    "image_alt": "Multiple model predictions are combined with learned error rules and domain knowledge through abductive reasoning to select consistent predictions.",
     "description": "When pre-trained perception models are deployed in novel environments, distribution shift makes them disagree. We cast the problem of reconciling those conflicting predictions as consistency-based abduction applied at test time rather than during training, achieving average relative improvements of roughly 13.6% in F1 and 16.6% in accuracy over the best individual model across 15 test datasets.",
     "tldr": "Reconciles conflicting predictions from multiple pre-trained perception models under distribution shift by treating it as a test-time consistency-based abduction problem, beating the best single model by ~13.6% F1 across 15 datasets.",
     "arxiv_id": "2505.19361",
@@ -110,20 +153,30 @@
       "pdf": "https://arxiv.org/abs/2505.19361",
       "pdf_direct": "https://arxiv.org/pdf/2505.19361"
     },
-    "bibtex": "@inproceedings{leiva2026consistency,\n    title={Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments},\n    author={Leiva, Mario A. and Ngu, Noel and Kricheli, Joshua Shay and Taparia, Aditya and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John and Simari, Gerardo I.},\n    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n    pages={19216--19223},\n    year={2026}\n}"
+    "bibtex": "@inproceedings{leiva2026consistency,\n    title={Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments},\n    author={Leiva, Mario and Ngu, Noel and Kricheli, Joshua Shay and Taparia, Aditya and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John and Simari, Gerardo},\n    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n    pages={19216--19223},\n    year={2026},\n    volume={40},\n    number={23},\n    doi={10.1609/aaai.v40i23.38996},\n    url={https://ojs.aaai.org/index.php/AAAI/article/view/38996}\n}"
   },
   {
     "id": "batcave",
     "slug": "batcave",
     "title": "BaTCAVe: Trustworthy Explanations for Robot Behaviors",
-    "authors": ["Som Sagar", "Aditya Taparia", "Harsh Mankodiya", "Pranav Bidare", "Yifan Zhou", "Ransalu Senanayake"],
+    "authors": [
+      "Som Sagar",
+      "Aditya Taparia",
+      "Harsh Mankodiya",
+      "Pranav Bidare",
+      "Yifan Zhou",
+      "Ransalu Senanayake"
+    ],
     "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
     "venue_short": "IROS 2025",
     "venue_type": "conference",
     "year": "2025",
     "sort_key": "2025-10",
     "category": "conference",
-    "equal_contribution": ["Som Sagar", "Aditya Taparia"],
+    "equal_contribution": [
+      "Som Sagar",
+      "Aditya Taparia"
+    ],
     "image": "images/Neurips_SATA.png",
     "image_alt": "Overview figure for BaTCAVe, showing Bayesian concept activation vectors producing explanations of robot decisions with uncertainty estimates.",
     "description": "We introduce BaTCAVe, a Bayesian extension of concept activation vectors that attaches calibrated uncertainty estimates to concept-based explanations of robot decisions, making post-hoc interpretation of neural network policies trustworthy across both simulation platforms and real-world robotic systems.",
@@ -132,16 +185,20 @@
     "links": {
       "pdf": "https://arxiv.org/abs/2409.10733",
       "pdf_direct": "https://arxiv.org/pdf/2409.10733",
-      "video": "videos/BaTCAVe Video.mp4",
+      "video": "https://www.youtube.com/watch?v=us2KxZwPEzI",
       "code": "https://github.com/aditya-taparia/BaTCAVe"
     },
-    "bibtex": "@inproceedings{sagar2025batcave,\n    title={BaTCAVe: Trustworthy Explanations for Robot Behaviors},\n    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},\n    booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n    pages={13867--13874},\n    year={2025}\n}"
+    "bibtex": "@inproceedings{sagar2025batcave,\n    title={{BaTCAVe}: Trustworthy Explanations for Robot Behaviors},\n    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},\n    booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n    pages={13867--13874},\n    year={2025},\n    doi={10.1109/IROS60139.2025.11245893},\n    publisher={IEEE},\n    url={https://doi.org/10.1109/IROS60139.2025.11245893}\n}"
   },
   {
     "id": "rlpo",
     "slug": "rlpo",
     "title": "Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations",
-    "authors": ["Aditya Taparia", "Som Sagar", "Ransalu Senanayake"],
+    "authors": [
+      "Aditya Taparia",
+      "Som Sagar",
+      "Ransalu Senanayake"
+    ],
     "venue": "International Conference on Machine Learning (ICML)",
     "venue_short": "ICML 2025",
     "venue_type": "conference",
@@ -156,16 +213,25 @@
     "links": {
       "pdf": "https://arxiv.org/abs/2408.13438",
       "pdf_direct": "https://arxiv.org/pdf/2408.13438",
-      "video": "videos/GenXAI Video.mp4",
+      "video": "https://www.youtube.com/watch?v=Amq_S7S9hNs",
       "code": "https://github.com/aditya-taparia/RLPO"
     },
-    "bibtex": "@inproceedings{taparia2025explainable,\n    title={Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    booktitle={Proceedings of the 42nd International Conference on Machine Learning},\n    year={2025}\n}"
+    "bibtex": "@inproceedings{taparia2025explainable,\n    title={Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    booktitle={Proceedings of the 42nd International Conference on Machine Learning},\n    year={2025},\n    pages={59154--59181},\n    volume={267},\n    series={Proceedings of Machine Learning Research},\n    publisher={PMLR},\n    url={https://proceedings.mlr.press/v267/taparia25a.html}\n}"
   },
   {
     "id": "mds_a",
     "slug": "mds-a",
     "title": "Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation",
-    "authors": ["Noel Ngu", "Aditya Taparia", "Gerardo I. Simari", "Mario A. Leiva", "Ransalu Senanayake", "Paulo Shakarian", "Nathaniel D. Bastian", "John Corcoran"],
+    "authors": [
+      "Noel Ngu",
+      "Aditya Taparia",
+      "Gerardo I. Simari",
+      "Mario A. Leiva",
+      "Ransalu Senanayake",
+      "Paulo Shakarian",
+      "Nathaniel D. Bastian",
+      "John Corcoran"
+    ],
     "venue": "Proceedings of the AAAI Symposium Series",
     "venue_short": "AAAI Symposium 2025",
     "venue_type": "conference",
@@ -181,13 +247,17 @@
       "pdf": "https://arxiv.org/abs/2502.13289",
       "pdf_direct": "https://arxiv.org/pdf/2502.13289"
     },
-    "bibtex": "@inproceedings{ngu2025multiple,\n    title={Multiple Distribution Shift-Aerial (MDS-A): A Dataset for Test-Time Error Detection and Model Adaptation},\n    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I. and Leiva, Mario A. and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John},\n    booktitle={Proceedings of the AAAI Symposium Series},\n    volume={5},\n    pages={379--383},\n    year={2025}\n}"
+    "bibtex": "@inproceedings{ngu2025multiple,\n    title={Multiple Distribution Shift - Aerial ({MDS-A}): A Dataset for Test-Time Error Detection and Model Adaptation},\n    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I. and Leiva, Mario and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John},\n    booktitle={Proceedings of the AAAI Symposium Series},\n    volume={5},\n    pages={379--383},\n    year={2025},\n    number={1},\n    doi={10.1609/aaaiss.v5i1.35616},\n    url={https://ojs.aaai.org/index.php/AAAI-SS/article/view/35616}\n}"
   },
   {
     "id": "llm_redteaming",
     "slug": "red-teaming-diffusion",
     "title": "LLM-Assisted Red Teaming of Diffusion Models through \"Failures Are Fated, But Can Be Faded\"",
-    "authors": ["Som Sagar", "Aditya Taparia", "Ransalu Senanayake"],
+    "authors": [
+      "Som Sagar",
+      "Aditya Taparia",
+      "Ransalu Senanayake"
+    ],
     "venue": "NeurIPS Workshop on Red Teaming GenAI",
     "venue_short": "NeurIPS Workshop 2024",
     "venue_type": "workshop",
@@ -203,21 +273,27 @@
       "pdf": "https://arxiv.org/abs/2410.16738",
       "pdf_direct": "https://arxiv.org/pdf/2410.16738"
     },
-    "bibtex": "@inproceedings{sagar2024llm,\n    title={LLM-Assisted Red Teaming of Diffusion Models through \"Failures Are Fated, But Can Be Faded\"},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={Red Teaming GenAI: What Can We Learn from Adversaries?},\n    year={2024}\n}"
+    "bibtex": "@inproceedings{sagar2024llm,\n    title={{LLM}-Assisted Red Teaming of Diffusion Models through \"Failures Are Fated, But Can Be Faded\"},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={NeurIPS Workshop on Red Teaming GenAI: What Can We Learn from Adversaries?},\n    year={2024},\n    url={https://openreview.net/forum?id=COUulQLNE2},\n    eprint={2410.16738},\n    archivePrefix={arXiv}\n}"
   },
   {
     "id": "hpix",
     "slug": "hpix",
     "title": "Transforming satellite imagery into vector maps using modified GANs",
-    "authors": ["Aditya Taparia", "Ali Kashif Bashir", "Yaodong Zhu", "Thippa Reddy Gdekallu", "Keshab Nath"],
+    "authors": [
+      "Aditya Taparia",
+      "Ali Kashif Bashir",
+      "Yaodong Zhu",
+      "Thippa Reddy Gdekallu",
+      "Keshab Nath"
+    ],
     "venue": "Alexandria Engineering Journal",
     "venue_short": "Alexandria Eng. J. 2024",
     "venue_type": "journal",
     "year": "2024",
     "sort_key": "2024-09",
     "category": "conference",
-    "image": null,
-    "image_alt": null,
+    "image": "images/hpix.png",
+    "image_alt": "Satellite imagery alongside generated vector maps showing road intersections and classified building clusters.",
     "description": "We propose HPix, a modified GAN that generates vector tile maps directly from satellite imagery using two hierarchical frameworks operating at global and local levels, supporting applications from building footprint extraction and disaster impact analysis to urban planning and transport links.",
     "tldr": "HPix uses a hierarchical modified GAN to generate vector tile maps directly from satellite images, for building footprints, disaster analysis, and urban planning.",
     "arxiv_id": "2407.13680",
@@ -227,13 +303,17 @@
       "pdf_direct": "https://arxiv.org/pdf/2407.13680",
       "arxiv": "https://arxiv.org/abs/2407.13680"
     },
-    "bibtex": "@article{taparia2024transforming,\n    title={Transforming satellite imagery into vector maps using modified GANs},\n    author={Taparia, Aditya and Bashir, Ali Kashif and Zhu, Yaodong and Gdekallu, Thippa Reddy and Nath, Keshab},\n    journal={Alexandria Engineering Journal},\n    volume={109},\n    pages={792--806},\n    year={2024},\n    doi={10.1016/j.aej.2024.09.074}\n}"
+    "bibtex": "@article{taparia2024transforming,\n    title={Transforming satellite imagery into vector maps using modified {GANs}},\n    author={Taparia, Aditya and Bashir, Ali Kashif and Zhu, Yaodong and Gdekallu, Thippa Reddy and Nath, Keshab},\n    journal={Alexandria Engineering Journal},\n    volume={109},\n    pages={792--806},\n    year={2024},\n    doi={10.1016/j.aej.2024.09.074},\n    url={https://doi.org/10.1016/j.aej.2024.09.074}\n}"
   },
   {
     "id": "failures_fated",
     "slug": "failures-are-fated",
     "title": "Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models",
-    "authors": ["Som Sagar", "Aditya Taparia", "Ransalu Senanayake"],
+    "authors": [
+      "Som Sagar",
+      "Aditya Taparia",
+      "Ransalu Senanayake"
+    ],
     "venue": "International Conference on Machine Learning (ICML)",
     "venue_short": "ICML 2024",
     "venue_type": "conference",
@@ -249,9 +329,9 @@
     "links": {
       "pdf": "https://arxiv.org/abs/2406.07145",
       "pdf_direct": "https://arxiv.org/pdf/2406.07145",
-      "video": "videos/Failure Video.mp4",
+      "video": "https://www.youtube.com/watch?v=PJkqT2btEmE",
       "code": "https://github.com/somsagar07/FailureShiftRL"
     },
-    "bibtex": "@inproceedings{sagar2024failures,\n    title={Failures are fated, but can be faded: characterizing and mitigating unwanted behaviors in large-scale vision and language models},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={Proceedings of the 41st International Conference on Machine Learning},\n    pages={42999--43023},\n    year={2024}\n}"
+    "bibtex": "@inproceedings{sagar2024failures,\n    title={Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={Proceedings of the 41st International Conference on Machine Learning},\n    pages={42999--43023},\n    year={2024},\n    volume={235},\n    series={Proceedings of Machine Learning Research},\n    publisher={PMLR},\n    url={https://proceedings.mlr.press/v235/sagar24a.html}\n}"
   }
 ]

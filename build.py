@@ -105,14 +105,20 @@ def strip_tags(text):
     return re.sub(r"<[^>]+>", "", text or "")
 
 
-def authors_html(authors, highlight="Aditya Taparia"):
+def authors_html(authors, highlight="Aditya Taparia", equal_contribution=None):
+    equal_contribution = set(equal_contribution or [])
     parts = []
     for name in authors:
         if name == highlight:
             parts.append("<strong>%s</strong>" % esc(name))
         else:
             parts.append(esc(name))
-    return ", ".join(parts)
+        if name in equal_contribution:
+            parts[-1] += '<sup title="Equal contribution">*</sup>'
+    result = ", ".join(parts)
+    if equal_contribution:
+        result += ' <span class="equal-note">(* Equal contribution)</span>'
+    return result
 
 
 def authors_plain(authors):
@@ -283,10 +289,14 @@ def pub_card(site, pub, prefix="", index=0):
             '<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
             '<span class="material-icons">picture_as_pdf</span> PDF</a>' % esc(links["pdf"]))
     if links.get("video"):
-        buttons.append(
-            '<a href="#" class="btn btn-publication" data-video="%s%s">'
-            '<span class="material-icons">play_circle</span> Video</a>'
-            % (prefix, esc(links["video"])))
+        if links["video"].startswith("https://"):
+            buttons.append('<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
+                           '<span class="material-icons">play_circle</span> Video</a>' % esc(links["video"]))
+        else:
+            buttons.append(
+                '<a href="#" class="btn btn-publication" data-video="%s%s">'
+                '<span class="material-icons">play_circle</span> Video</a>'
+                % (prefix, esc(links["video"])))
     if links.get("code"):
         buttons.append(
             '<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
@@ -303,9 +313,8 @@ def pub_card(site, pub, prefix="", index=0):
     return f"""<li class="pub-item" data-category="{esc(pub['category'])}">
 {thumb}<div class="pub-body">
 <h3 class="pub-title"><a href="{esc(paper_url)}">{esc(pub['title'])}</a></h3>
-<div class="pub-authors">{authors_html(pub['authors'])}</div>
+<div class="pub-authors">{authors_html(pub['authors'], equal_contribution=pub.get('equal_contribution'))}</div>
 <div class="pub-venue">{venue_line}</div>
-<div class="description">{esc(pub['tldr'])}</div>
 <div class="pub-links">{''.join(buttons)}</div>
 <div id="{bib_id}" class="bibtex"><pre>{esc(pub['bibtex'])}</pre></div>
 </div>
@@ -350,18 +359,15 @@ def build_index(site, pubs, news, intro):
         ],
     }
 
-    # The rail's links break into two centred rows, the fuller one on top.
-    # An explicit break element beats letting flex-wrap choose, which would
-    # reshuffle the moment a label or the webfont changed width.
-    break_after = (len(site["links"]) + 1) // 2
+    # Icon links retain accessible names and hover tooltips.
     links = []
-    for i, link in enumerate(site["links"]):
+    for link in site["links"]:
         target = ' target="_blank" rel="noopener"' if link["external"] else ""
         links.append(
-            '<a href="%s" class="btn"%s>%s %s</a>'
-            % (esc(link["href"]), target, icon_markup(link["icon"]), esc(link["label"])))
-        if i + 1 == break_after:
-            links.append('<span class="link-break" aria-hidden="true"></span>')
+            '<a href="%s" class="contact-icon" aria-label="%s" title="%s"%s>'
+            '<span aria-hidden="true">%s</span></a>'
+            % (esc(link["href"]), esc(link["label"]), esc(link["label"]),
+               target, icon_markup(link["icon"])))
 
     news_rows = []
     for item in news:
@@ -521,17 +527,18 @@ def build_paper(site, pub, prev_pub, next_pub):
         buttons.append('<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
                        '<span class="material-icons">description</span> arXiv</a>' % esc(links["arxiv"]))
     if links.get("video"):
-        buttons.append('<a href="#" class="btn btn-publication" data-video="%s%s">'
-                       '<span class="material-icons">play_circle</span> Video</a>'
-                       % (prefix, esc(links["video"])))
+        if links["video"].startswith("https://"):
+            buttons.append('<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
+                           '<span class="material-icons">play_circle</span> Video</a>' % esc(links["video"]))
+        else:
+            buttons.append('<a href="#" class="btn btn-publication" data-video="%s%s">'
+                           '<span class="material-icons">play_circle</span> Video</a>'
+                           % (prefix, esc(links["video"])))
     if links.get("code"):
         buttons.append('<a href="%s" class="btn btn-publication" target="_blank" rel="noopener">'
                        '<span class="material-icons">code</span> Code</a>' % esc(links["code"]))
 
-    equal = ""
-    if pub.get("equal_contribution"):
-        equal = '<p class="paper-meta">* Equal contribution by %s.</p>' % esc(
-            " and ".join(pub["equal_contribution"]))
+
 
     video_modal = ""
     if links.get("video"):
@@ -568,9 +575,8 @@ def build_paper(site, pub, prev_pub, next_pub):
   <article>
     <header class="paper-header">
       <h1 class="paper-title">{esc(pub['title'])}</h1>
-      <p class="paper-authors">{authors_html(pub['authors'])}</p>
+      <p class="paper-authors">{authors_html(pub['authors'], equal_contribution=pub.get('equal_contribution'))}</p>
       <p class="paper-meta">{venue_line}</p>
-      {equal}
       <div class="pub-links">{''.join(buttons)}</div>
     </header>
 
@@ -622,7 +628,7 @@ def build_papers_index(site, pubs):
             '<div class="pub-venue">%s, %s%s</div>'
             '</div></li>'
             % (esc(pub["category"]), esc(pub["slug"]), esc(pub["title"]),
-               authors_html(pub["authors"]), esc(pub["venue"]), esc(pub["year"]), award))
+               authors_html(pub["authors"], equal_contribution=pub.get("equal_contribution")), esc(pub["venue"]), esc(pub["year"]), award))
 
     body = f"""<body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -766,7 +772,7 @@ def validate(site, pubs, news):
             if pub.get(key) and not os.path.exists(os.path.join(ROOT, pub[key])):
                 errors.append("%s: %s not found: %s" % (pub["id"], key, pub[key]))
         video = (pub.get("links") or {}).get("video")
-        if video and not os.path.exists(os.path.join(ROOT, video)):
+        if video and not video.startswith("https://") and not os.path.exists(os.path.join(ROOT, video)):
             errors.append("%s: video not found: %s" % (pub["id"], video))
 
     for item in news:

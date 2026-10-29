@@ -202,22 +202,15 @@ h3.pub-title {
   box-sizing: border-box;
 }
 
-/* Photo and contact links stack into one right-hand rail so the short
-   column has enough body to sit beside a long bio instead of floating.
-   The empty third row soaks up whatever height the prose has left over,
-   which keeps the links tucked under the photo rather than drifting down
-   with it. */
+/* Portrait and icon links share a right-hand column beside the bio. */
 .intro-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) var(--rail);
+  grid-template-columns: minmax(0, 1fr) 260px;
   grid-template-rows: auto auto 1fr;
-  grid-template-areas:
-    "text photo"
-    "text links"
-    "text .";
-  column-gap: 30px;
+  grid-template-areas: "text photo" "text links" "text .";
+  column-gap: 36px;
   align-items: start;
-  padding: 56px 0 0 0;
+  padding: 40px 0 0;
 }
 
 .intro-text {
@@ -242,15 +235,15 @@ h3.pub-title {
   grid-area: photo;
 }
 
-/* No aspect-ratio and no object-fit: the file is the full uncropped frame,
-   so its own 3:4 proportions drive the box and nothing gets trimmed. The
-   width/height attributes on the tag reserve the right space before it
-   loads. */
+/* Crop in CSS without distorting or modifying the original portrait. */
 .intro-photo img {
   display: block;
   width: 100%;
+  aspect-ratio: 1;
   height: auto;
-  border-radius: 6%;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 12px;
 }
 
 .name-block {
@@ -343,35 +336,40 @@ h3.pub-title {
   text-decoration: none;
 }
 
-/* Contact links: a full-width stack in the rail under the photo. Wrapping
-   them into rows leaves a ragged edge, because "Google Scholar" is nearly
-   twice the width of "CV". */
-/* Two centred rows under the photo, the fuller one on top. The break is an
-   empty full-width flex item emitted by build.py rather than a wrap the
-   browser happens to land on, so the split stays 3 + 2 whatever the labels
-   measure. */
+/* Circular contact icons beneath the portrait. */
 .link-row {
   grid-area: links;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
-  margin-top: 14px;
+  gap: 10px;
+  margin-top: 16px;
 }
 
-.link-break {
-  flex-basis: 100%;
-  height: 0;
-}
-
-/* Both rows fill the rail, so their outer edges line up with the photo's
-   instead of stopping a few pixels short of it. */
-.link-row .btn {
-  flex: 1 1 auto;
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  font-size: 13.5px;
-  padding: 7px 12px;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  color: var(--accent);
+  background: transparent;
+  text-decoration: none;
+  transition: background-color .18s ease, color .18s ease;
 }
+.contact-icon > span { display: inline-flex; align-items: center; justify-content: center; }
+.contact-icon .material-icons { font-size: 20px; }
+.contact-icon svg { width: 19px; height: 19px; fill: currentColor; }
+.contact-icon:hover,
+.contact-icon:focus-visible {
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+}
+.contact-icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 .pub-links {
   display: flex;
@@ -807,41 +805,29 @@ h3.pub-title {
 
 /* --------------------------------------------------------- responsive --- */
 
-/* The rail needs its full width to hold three links across, so the intro
-   stacks well before the phone breakpoint rather than squeezing the prose
-   into a forty-character measure beside a shrinking photo. */
+/* Stack the compact portrait and bio on smaller screens. */
 @media (max-width: 820px) {
-  /* One column: photo, then name and bio, then the links. */
+  /* Keep the icons directly below the portrait on mobile, too. */
   .intro-grid {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto;
     grid-template-areas:
       "photo"
-      "text"
-      "links";
+      "links"
+      "text";
     row-gap: 20px;
     padding-top: 32px;
   }
 
   .intro-photo {
-    width: 190px;
+    width: min(240px, 100%);
+    justify-self: center;
   }
 
-  /* Ragged left edge under a left-aligned photo and bio; the forced 3 + 2
-     split belongs to the rail, not to a full-width column. */
   .link-row {
-    justify-content: flex-start;
-    margin-top: 0;
-  }
-
-  .link-break {
-    display: none;
-  }
-
-  /* Natural widths on a full-width column; stretching two links across a
-     phone screen makes them look like form fields. */
-  .link-row .btn {
-    flex: 0 0 auto;
+    justify-content: center;
+    gap: 8px;
+    margin-top: -4px;
   }
 
   .home-section {

@@ -140,6 +140,16 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<div id="videoModal" class="modal" role="dialog" aria-modal="true" aria-label="Video player">
+  <div class="modal-content">
+    <button type="button" class="close-btn" aria-label="Close video">&times;</button>
+    <video id="modalVideo" controls preload="none">
+      <source src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
 <main id="main" class="page">
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -153,8 +163,7 @@
       <h1 class="paper-title">VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection</h1>
       <p class="paper-authors"><strong>Aditya Taparia</strong>, Noel Ngu, Mario Leiva, Joshua Shay Kricheli, John Corcoran, Nathaniel D. Bastian, Gerardo Simari, Paulo Shakarian, Ransalu Senanayake</p>
       <p class="paper-meta">European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD), 2026 &middot; <span class="pub-award">Shortlisted for Best Research Track Student Paper Award 🎗</span></p>
-      
-      <div class="pub-links"><a href="https://arxiv.org/abs/2505.12715" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a></div>
+      <div class="pub-links"><a href="https://arxiv.org/abs/2505.12715" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">picture_as_pdf</span> PDF</a><a href="https://www.youtube.com/watch?v=iFKvibdIzTg" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">play_circle</span> Video</a><a href="https://github.com/aditya-taparia/VLCFusion" class="btn btn-publication" target="_blank" rel="noopener"><span class="material-icons">code</span> Code</a></div>
     </header>
 
     <figure class="paper-figure"><img src="../../images/vlc_fusion_full.jpg" alt="VLC Fusion architecture: LiDAR and camera features are combined with vision-language model conditions through a CBAM, BatchNorm and FiLM block, raising detections from 6/20 to 12/20 objects compared with standard multi-modal fusion." loading="lazy" decoding="async"></figure>
@@ -167,10 +176,20 @@
     <section class="paper-section">
       <h2>BibTeX</h2>
       <pre class="paper-bibtex" id="bibtex-vlc-fusion">@inproceedings{taparia2026vlc,
-    title={VLC Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},
+    title={{VLC} Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},
     author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},
-    booktitle={European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML PKDD)},
-    year={2026}
+    booktitle={Machine Learning and Knowledge Discovery in Databases. Research Track and Applied Data Science Track},
+    year={2027},
+    url={https://doi.org/10.1007/978-3-032-37679-4_4},
+    eprint={2505.12715},
+    archivePrefix={arXiv},
+    pages={51--68},
+    volume={16948},
+    series={Lecture Notes in Computer Science},
+    publisher={Springer Nature Switzerland},
+    address={Cham},
+    doi={10.1007/978-3-032-37679-4_4},
+    isbn={978-3-032-37679-4}
 }</pre>
       <button type="button" class="btn btn-publication" data-copy-target="bibtex-vlc-fusion" data-label="Copy BibTeX">
         <span class="material-icons">content_copy</span> Copy BibTeX
@@ -179,7 +198,7 @@
   </article>
 
   <nav class="footer-nav" aria-label="Publication navigation">
-    <a href="../">All publications</a> &middot; <a href="../anatomy-of-uncertainty/">ICLR Workshop 2026 &rarr;</a>
+    <a href="../learning-to-configure/">&larr; NeurIPS AgenticOS Workshop 2026</a> &middot; <a href="../">All publications</a> &middot; <a href="../anatomy-of-uncertainty/">ICLR Workshop 2026 &rarr;</a>
   </nav>
 
 </main>

@@ -1,0 +1,207 @@
+[
+  {
+    "slug": "vlc-fusion",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://link.springer.com/chapter/10.1007/978-3-032-37679-4_4"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Springer citation year 2027, first online 2026-10-17, conference ECML PKDD 2026. User explicitly selected 2027 for BibTeX. Chapter export returned a browser challenge; metadata transcribed from the chapter page. DOI, 16948, 51--68, ISBN and all nine authors verified.",
+    "bibtex": "@inproceedings{taparia2026vlc,\n    title={{VLC} Fusion: Vision-Language Conditioned Sensor Fusion for Robust Object Detection},\n    author={Taparia, Aditya and Ngu, Noel and Leiva, Mario and Kricheli, Joshua Shay and Corcoran, John and Bastian, Nathaniel D. and Simari, Gerardo and Shakarian, Paulo and Senanayake, Ransalu},\n    booktitle={Machine Learning and Knowledge Discovery in Databases. Research Track and Applied Data Science Track},\n    year={2027},\n    url={https://doi.org/10.1007/978-3-032-37679-4_4},\n    eprint={2505.12715},\n    archivePrefix={arXiv},\n    pages={51--68},\n    volume={16948},\n    series={Lecture Notes in Computer Science},\n    publisher={Springer Nature Switzerland},\n    address={Cham},\n    doi={10.1007/978-3-032-37679-4_4},\n    isbn={978-3-032-37679-4}\n}"
+  },
+  {
+    "slug": "anatomy-of-uncertainty",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://sites.google.com/view/icbinb-2026/papers",
+      "https://sites.google.com/view/icbinb-2026/",
+      "https://arxiv.org/abs/2603.24967"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Official ICBINB accepted-paper list confirms paper and four authors; uses Vivek Narayanaswamy. Workshop title expanded. OpenReview link comes from official list; API blocked. No unverified pages/volume/DOI added.",
+    "bibtex": "@inproceedings{taparia2026anatomy,\n    title={The Anatomy of Uncertainty in {LLMs}},\n    author={Taparia, Aditya and Senanayake, Ransalu and Thopalli, Kowshik and Narayanaswamy, Vivek},\n    booktitle={ICLR Workshop on I Can't Believe It's Not Better: Where Large Language Models Need to Improve},\n    year={2026},\n    url={https://openreview.net/forum?id=0GYclsjLUb},\n    eprint={2603.24967},\n    archivePrefix={arXiv}\n}"
+  },
+  {
+    "slug": "expressivity-bench",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://aclanthology.org/2026.findings-eacl.235/"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Core citation fields checked against publisher record; existing values match after prior corrections.",
+    "bibtex": "@inproceedings{tint2026expressivitybench,\n    title={{ExpressivityBench}: Can {LLMs} Communicate Implicitly?},\n    author={Tint, Joshua and Sagar, Som and Taparia, Aditya and Raines, Kelly and Pathiraja, Bimsara and Liu, Caleb and Senanayake, Ransalu},\n    booktitle={Findings of the Association for Computational Linguistics: EACL 2026},\n    pages={4500--4515},\n    year={2026},\n    doi={10.18653/v1/2026.findings-eacl.235},\n    publisher={Association for Computational Linguistics},\n    address={Rabat, Morocco},\n    url={https://aclanthology.org/2026.findings-eacl.235/}\n}"
+  },
+  {
+    "slug": "learning-to-configure",
+    "checked_on": "2026-10-29",
+    "status": "acceptance_supported_by_user_cv_only",
+    "sources": [
+      "https://arxiv.org/abs/2602.11574",
+      "https://agentic-fmos.github.io/",
+      "User-supplied CV (2).pdf, page 1"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Title/authors/year checked against arXiv. Acceptance supported by user CV only; official workshop website confirms full name, 2026 and non-archival status but does not list this paper. OpenReview API returned 403. No proceedings pages/volume/DOI invented.",
+    "bibtex": "@inproceedings{taparia2026learning,\n    title={Learning to Configure Agentic {AI} Systems},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    booktitle={AgenticOS: Co-designing Systems and ML Foundations of an OS Layer for Agentic AI, NeurIPS Workshop},\n    year={2026},\n    url={https://arxiv.org/abs/2602.11574},\n    eprint={2602.11574},\n    archivePrefix={arXiv},\n    note={Accepted; non-archival workshop}\n}"
+  },
+  {
+    "slug": "abductive-reasoning",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://ojs.aaai.org/index.php/AAAI/article/view/38996",
+      "https://api.crossref.org/works/10.1609/aaai.v40i23.38996"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Publisher record uses Mario Leiva and Gerardo Simari. Title, nine authors/order, venue, year, 40(23), 19216--19223 and DOI checked.",
+    "bibtex": "@inproceedings{leiva2026consistency,\n    title={Consistency-based Abductive Reasoning over Perceptual Errors of Multiple Pre-trained Models in Novel Environments},\n    author={Leiva, Mario and Ngu, Noel and Kricheli, Joshua Shay and Taparia, Aditya and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John and Simari, Gerardo},\n    booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},\n    pages={19216--19223},\n    year={2026},\n    volume={40},\n    number={23},\n    doi={10.1609/aaai.v40i23.38996},\n    url={https://ojs.aaai.org/index.php/AAAI/article/view/38996}\n}"
+  },
+  {
+    "slug": "batcave",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://api.crossref.org/works/10.1109/IROS60139.2025.11245893"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Core citation fields checked against publisher record; existing values match after prior corrections.",
+    "bibtex": "@inproceedings{sagar2025batcave,\n    title={{BaTCAVe}: Trustworthy Explanations for Robot Behaviors},\n    author={Sagar, Som and Taparia, Aditya and Mankodiya, Harsh and Bidare, Pranav and Zhou, Yifan and Senanayake, Ransalu},\n    booktitle={2025 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},\n    pages={13867--13874},\n    year={2025},\n    doi={10.1109/IROS60139.2025.11245893},\n    publisher={IEEE},\n    url={https://doi.org/10.1109/IROS60139.2025.11245893}\n}"
+  },
+  {
+    "slug": "rlpo",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://proceedings.mlr.press/v267/taparia25a.html"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Core citation fields checked against publisher record; existing values match after prior corrections.",
+    "bibtex": "@inproceedings{taparia2025explainable,\n    title={Explainable Concept Generation through Vision-Language Preference Learning for Understanding Neural Networks' Internal Representations},\n    author={Taparia, Aditya and Sagar, Som and Senanayake, Ransalu},\n    booktitle={Proceedings of the 42nd International Conference on Machine Learning},\n    year={2025},\n    pages={59154--59181},\n    volume={267},\n    series={Proceedings of Machine Learning Research},\n    publisher={PMLR},\n    url={https://proceedings.mlr.press/v267/taparia25a.html}\n}"
+  },
+  {
+    "slug": "mds-a",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://ojs.aaai.org/index.php/AAAI-SS/article/view/35616",
+      "https://api.crossref.org/works/10.1609/aaaiss.v5i1.35616"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Publisher record uses Mario Leiva and Gerardo I. Simari; title has spaces around the hyphen before Aerial. Eight authors/order, 5(1), 379--383, year and DOI checked.",
+    "bibtex": "@inproceedings{ngu2025multiple,\n    title={Multiple Distribution Shift - Aerial ({MDS-A}): A Dataset for Test-Time Error Detection and Model Adaptation},\n    author={Ngu, Noel and Taparia, Aditya and Simari, Gerardo I. and Leiva, Mario and Senanayake, Ransalu and Shakarian, Paulo and Bastian, Nathaniel D. and Corcoran, John},\n    booktitle={Proceedings of the AAAI Symposium Series},\n    volume={5},\n    pages={379--383},\n    year={2025},\n    number={1},\n    doi={10.1609/aaaiss.v5i1.35616},\n    url={https://ojs.aaai.org/index.php/AAAI-SS/article/view/35616}\n}"
+  },
+  {
+    "slug": "red-teaming-diffusion",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://openreview.net/pdf?id=COUulQLNE2",
+      "https://arxiv.org/abs/2410.16738"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Official OpenReview paper confirms title, three authors/order and NeurIPS 2024 Red Teaming GenAI workshop. Link updated to workshop record; no unverified pages/DOI added.",
+    "bibtex": "@inproceedings{sagar2024llm,\n    title={{LLM}-Assisted Red Teaming of Diffusion Models through \"Failures Are Fated, But Can Be Faded\"},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={NeurIPS Workshop on Red Teaming GenAI: What Can We Learn from Adversaries?},\n    year={2024},\n    url={https://openreview.net/forum?id=COUulQLNE2},\n    eprint={2410.16738},\n    archivePrefix={arXiv}\n}"
+  },
+  {
+    "slug": "hpix",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://api.crossref.org/works/10.1016/j.aej.2024.09.074"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Publisher-deposited Crossref spelling is Gdekallu, Thippa Reddy; retained rather than changing to Gadekallu from secondary sources. Five authors/order, title, journal, 109, 792--806, 2024 and DOI checked.",
+    "bibtex": "@article{taparia2024transforming,\n    title={Transforming satellite imagery into vector maps using modified {GANs}},\n    author={Taparia, Aditya and Bashir, Ali Kashif and Zhu, Yaodong and Gdekallu, Thippa Reddy and Nath, Keshab},\n    journal={Alexandria Engineering Journal},\n    volume={109},\n    pages={792--806},\n    year={2024},\n    doi={10.1016/j.aej.2024.09.074},\n    url={https://doi.org/10.1016/j.aej.2024.09.074}\n}"
+  },
+  {
+    "slug": "failures-are-fated",
+    "checked_on": "2026-10-29",
+    "status": "verified_against_primary_record",
+    "sources": [
+      "https://proceedings.mlr.press/v235/sagar24a.html"
+    ],
+    "fields_checked": [
+      "title",
+      "author names and order",
+      "venue",
+      "year",
+      "pages/volume/issue/DOI where provided by source",
+      "source URL"
+    ],
+    "notes": "Core citation fields checked against publisher record; existing values match after prior corrections.",
+    "bibtex": "@inproceedings{sagar2024failures,\n    title={Failures Are Fated, But Can Be Faded: Characterizing and Mitigating Unwanted Behaviors in Large-Scale Vision and Language Models},\n    author={Sagar, Som and Taparia, Aditya and Senanayake, Ransalu},\n    booktitle={Proceedings of the 41st International Conference on Machine Learning},\n    pages={42999--43023},\n    year={2024},\n    volume={235},\n    series={Proceedings of Machine Learning Research},\n    publisher={PMLR},\n    url={https://proceedings.mlr.press/v235/sagar24a.html}\n}"
+  }
+]
