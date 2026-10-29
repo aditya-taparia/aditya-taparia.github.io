@@ -1,60 +1,60 @@
-name: Build site
-
-# Regenerates the static HTML whenever a content source changes, then commits
-# the result. GitHub Pages serves the committed output directly.
+name: Build and deploy site
 
 on:
   push:
     branches: [main]
-    paths:
-      - 'data/**'
-      - 'pages/**'
-      - 'images/**'
-      - 'build.py'
-      - 'verify.py'
-      - 'styles.css'
-      - 'main.js'
-      - '.github/workflows/build.yml'
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: build-site
+  group: pages-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    # Don't re-trigger on the commit this workflow itself pushes.
-    if: "!contains(github.event.head_commit.message, '[skip ci]')"
-
     steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-
-      # build.py and verify.py use the standard library only, so there is
-      # nothing to install and no dependency that can break the build.
-
       - name: Build
-        run: python3 build.py
-
+        run: python build.py
       - name: Verify
-        run: python3 verify.py
-
-      - name: Commit generated files
+        run: python verify.py
+      - name: Package public site
         run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A index.html papers 404.html llms.txt sitemap.xml robots.txt .nojekyll
-          if git diff --staged --quiet; then
-            echo "No changes to commit."
-          else
-            git commit -m "Rebuild site [skip ci]"
-            git push
-          fi
+          mkdir -p _site/data
+          cp index.html 404.html llms.txt sitemap.xml robots.txt .nojekyll styles.css main.js _site/
+          cp -R papers images videos _site/
+          cp data/*.pdf _site/data/
+          cp google*.html _site/
+          if [ -f CNAME ]; then cp CNAME _site/; fi
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
